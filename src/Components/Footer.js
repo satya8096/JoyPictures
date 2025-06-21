@@ -103,7 +103,7 @@ const Footer = () => {
         <div className="text-center mt-4">
           <p className="small mb-0">
             &copy; {new Date().getFullYear()}{" "}
-            <strong>Joypicturesstudio. All rights Reserved. </strong> | Crafted
+            <strong>Joypicturesstudio. All rights Reserved. </strong> | Created
             with ❤️{" "}
             <a href="https://nexgenwebdesigns.com">NexGen Web Designs</a>
           </p>

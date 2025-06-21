@@ -315,7 +315,7 @@ const Home = () => {
       <section className="cta-section d-flex align-items-center text-white">
         <div className="overlay"></div>
         <div className="container text-center cta-content">
-          <h3 className="section-heading" data-aos="zoom-in">
+          <h3 className="fw-bold" data-aos="zoom-in">
             Capturing Emotions, Crafting Stories
           </h3>
           <p className="cta-subheading" data-aos="zoom-in">

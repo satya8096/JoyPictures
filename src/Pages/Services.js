@@ -27,14 +27,14 @@ const Services = () => {
           <div>
             <Link
               to="/services/"
-              className="btn btn-danger btn-lg me-2"
+              className="btn btn-danger btn-lg me-2 mb-3"
               data-aos="zoom-in"
             >
               <i className="fas fa-camera me-2"></i>Explore Services
             </Link>
             <Link
               to="/contact/"
-              className="btn btn-light btn-lg"
+              className="btn btn-light btn-lg mb-3"
               data-aos="zoom-in"
             >
               <i className="fas fa-phone-alt me-2"></i>Book Now
@@ -160,7 +160,7 @@ const Services = () => {
           <div className="text-center mt-4">
             <a
               href="/portfolio/"
-              className="btn btn-outline-danger me-3"
+              className="btn btn-outline-danger me-3 mb-3"
               title="See Full Wedding Photography Album"
               data-aos="zoom-in"
             >
@@ -168,7 +168,7 @@ const Services = () => {
             </a>
             <a
               href="/portfolio/"
-              className="btn btn-outline-secondary"
+              className="btn btn-outline-secondary mb-3"
               title="Explore Maternity & Family Shoots"
               data-aos="zoom-in"
             >
@@ -236,7 +236,7 @@ const Services = () => {
           <div className="cta-buttons">
             <Link
               to="/contact/"
-              className="btn btn-danger btn-lg me-3"
+              className="btn btn-danger btn-lg me-3 mb-3"
               title="Book your photography session in Bangalore"
               data-aos="fade"
             >
@@ -244,7 +244,7 @@ const Services = () => {
             </Link>
             <Link
               to="https://wa.me/919876543210"
-              className="btn btn-light btn-lg"
+              className="btn btn-light btn-lg mb-3"
               target="_blank"
               rel="noopener noreferrer"
               title="WhatsApp Joypicturesstudio"

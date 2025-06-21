@@ -37,12 +37,12 @@ const Portfolio = () => {
       </section>
       <section className="portfolio-section">
         {/* Parallax Header */}
-        <div className="parallax-header text-center text-white">
+        <div className="parallax-header text-center mt-5">
           <div className="overlay">
-            <h3 className="fw-bold" data-aos="fade">
+            <h3 className="fw-bold section-heading" data-aos="fade">
               Explore Our Work
             </h3>
-            <p className="" data-aos="fade">
+            <p className="text-dark" data-aos="fade">
               A collection of moments captured across Bangalore
             </p>
           </div>

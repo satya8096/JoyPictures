@@ -12,9 +12,9 @@ const PricingPackage = () => {
           Choose the perfect plan for your event, wedding, or portfolio shoot.
         </p>
 
-        <div className="row mt-5 justify-content-center">
+        <div className="d-flex align-items-center flex-wrap mt-5 justify-content-around">
           {/* Basic Plan */}
-          <div className="col-md-4" data-aos="fade-right">
+          <div className="" data-aos="fade-right">
             <div className="pricing-card basic-plan shadow-sm">
               <h3 className="plan-title">Basic</h3>
               <p className="plan-price">₹9,999</p>
@@ -43,7 +43,7 @@ const PricingPackage = () => {
           </div>
 
           {/* Standard Plan */}
-          <div className="col-md-4" data-aos="fade-up">
+          <div className="" data-aos="fade-up">
             <div className="pricing-card standard-plan shadow-lg">
               <div className="recommended-badge">Popular</div>
               <h3 className="plan-title">Standard</h3>
@@ -73,7 +73,7 @@ const PricingPackage = () => {
           </div>
 
           {/* Premium Plan */}
-          <div className="col-md-4" data-aos="fade-left">
+          <div className="" data-aos="fade-left">
             <div className="pricing-card premium-plan shadow-sm">
               <h3 className="plan-title">Premium</h3>
               <p className="plan-price">₹29,999</p>

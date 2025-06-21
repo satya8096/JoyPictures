@@ -523,6 +523,8 @@ h6 {
   position: relative;
   margin-bottom: 2rem;
   border: 1px solid #eee;
+  height: 23rem;
+  width: 18rem;
 }
 
 .pricing-card:hover {
@@ -660,13 +662,13 @@ h6 {
   position: relative;
   background: url("https://img.freepik.com/premium-photo/midsection-bride-holding-bouquet_1048944-21001415.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740")
     center center/cover no-repeat;
-  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   overflow: hidden;
   background-attachment: fixed;
+  padding: 4rem 0rem;
 }
 
 .cta-section .overlay {
@@ -956,13 +958,13 @@ h6 {
 /*============== Portfolio Styles=============== */
 .portfolio-hero-section {
   position: relative;
-  height: 100vh;
   background-image: url("https://img.freepik.com/premium-photo/wedding-ceremony-area-arch-chairs-decor_419896-2101.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
   z-index: 1;
+  padding: 12rem 0rem;
 }
 
 .portfolio-hero-section .overlay {
@@ -1005,21 +1007,13 @@ h6 {
   }
 }
 
-/* Portfolio Grid Styles */
-/* Parallax header */
 .parallax-header {
-  background-image: url("https://img.freepik.com/free-photo/rose-petals-cover-green-garden-ready-traditional-hindu-weddi_8353-8879.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-
+/*
 .parallax-header .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 2rem;
@@ -1029,7 +1023,7 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} */
 
 /* Button styles */
 .btn-group .btn {
@@ -1296,12 +1290,10 @@ h6 {
 
 /* Section styling */
 
-
 .location-card {
   border: none;
   transition: all 0.3s ease-in-out;
   border-radius: 1rem;
-  
 }
 
 .location-card:hover {
@@ -1422,7 +1414,7 @@ h6 {
   justify-content: center;
 }
 
-.social-icon i{
+.social-icon i {
   color: black;
   font-size: 1.4rem;
 }
@@ -1431,8 +1423,6 @@ h6 {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://img.freepik.com/free-photo/bride-groom-holding-hands_1004-11.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740")
       center/cover no-repeat;
-  /* height: 90vh; */
-
   padding: 17rem 0.3rem;
   position: relative;
 }
@@ -1442,12 +1432,6 @@ h6 {
   line-height: 1.2;
   color: #ffffff;
 }
-
-/* .section-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #333;
-} */
 
 .section-subtitle {
   color: #777;
@@ -1495,12 +1479,6 @@ h6 {
 .why-choose-us-section {
   background-color: #f9f9f9;
 }
-
-/* .section-title {
-  font-weight: 700;
-  font-size: 2rem;
-  color: #333;
-} */
 
 .highlight {
   color: #ff5c5c;
@@ -1560,19 +1538,6 @@ h6 {
   color: #ffffff;
 }
 
-/* .btn-primary {
-  background-color: #ff5c5c;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #e04e4e;
-  color: #fff;
-} */
-
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -1583,4 +1548,43 @@ h6 {
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* ========Top and Whatsapp Buttons=======*/
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.top-button {
+  background-color: #2b6777;
+  color: white;
+  border: none;
+  width: 2.7rem;
+  height: 2.7rem;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.top-button:hover {
+  /* background-color: #388e3c; */
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 3.3rem;
+  height: 3.3rem;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover img {
+  transform: scale(1.1);
 }

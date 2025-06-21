@@ -7,11 +7,13 @@ import Services from "./Pages/Services";
 import Portfolio from "./Pages/Portfolio";
 import Contact from "./Pages/Contact";
 import About from "./Pages/About";
+import FloatingButtons from "./Components/TopAndWhatsAppButton";
 
 function App() {
   return (
     <div>
       <Navbar />
+      <FloatingButtons/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services/" element={<Services />} />
