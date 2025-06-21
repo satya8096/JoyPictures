@@ -14,10 +14,10 @@ const TeamCard = ({ name, role, bio, img }) => {
         <h6 className="text-muted mb-2">{role}</h6>
         <p className="card-text">{bio}</p>
         <div className="social-icons mt-3">
-          <a href="#" title="Instagram" className="me-3">
+          <a href="/" title="Instagram" className="me-3">
             <i className="fab fa-instagram"></i>
           </a>
-          <a href="#" title="LinkedIn">
+          <a href="/" title="LinkedIn">
             <i className="fab fa-linkedin-in"></i>
           </a>
         </div>
