@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { testimonialsData } from "../Data/HomePageData";
 import PricingPackage from "../Components/PricingPackage";
 import WhyChooseUs from "../Components/WhyChooseUs";
 import { HomeSEO } from "../Data/AllPagesSEO";
@@ -9,15 +8,7 @@ import Testimonials from "../Components/Testimonials";
 import { whatsappLink } from "../Data/BrandData";
 
 const Home = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
 
-  // Auto rotate every 5 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % testimonialsData.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="overflow-hidden">

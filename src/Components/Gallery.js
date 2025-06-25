@@ -38,7 +38,7 @@ const Gallery = () => {
               <div className="img-wrap">
                 <img
                   src={img.src}
-                  //   alt={img.alt}
+                  alt="gallery-image"
                   className="img-fluid rounded shadow-sm"
                 />
               </div>

@@ -31,7 +31,12 @@ const Testimonials = () => {
                 <div className="d-flex flex-column align-items-center text-center p-4">
                   <i className="fa-regular fa-circle-user testimonial-img rounded-circle"></i>
                   <h5 className="fw-semibold">
-                    <Link to={testimonial.link} className="text-decoration-none text-dark">{testimonial.name}</Link>
+                    <Link
+                      to={testimonial.link}
+                      className="text-decoration-none text-dark"
+                    >
+                      {testimonial.name}
+                    </Link>
                   </h5>
                   <p
                     className="fst-italic text-muted mx-auto"

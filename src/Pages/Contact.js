@@ -73,11 +73,7 @@ const Contact = () => {
           <div className="d-flex align-items-center justify-content-center">
             <Breadcrumbs currentPage={"Contact"} />
           </div>
-          <Link
-            to={whatsappLink}
-            className="btn btn-danger"
-            data-aos="zoom-in"
-          >
+          <Link to={whatsappLink} className="btn btn-danger" data-aos="zoom-in">
             <i className="fas fa-envelope-open-text me-2"></i> Send a Message
           </Link>
         </div>

@@ -1,4 +1,3 @@
-
 export const testimonialsData = [
   {
     text: "“Joypicturesstudio captured every emotion at our wedding beautifully. The team was professional, punctual, and incredibly creative.”",

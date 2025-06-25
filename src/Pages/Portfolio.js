@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import {
-  categories,
-  highlights,
-  imageData,
-  testimonials,
-} from "../Data/PortfolioPageData";
+import { highlights } from "../Data/PortfolioPageData";
 import { PortfolioSEO } from "../Data/AllPagesSEO";
 import Testimonials from "../Components/Testimonials";
 import Breadcrumbs from "../Components/Breadcrumbs";
 import Gallery from "../Components/Gallery";
 
 const Portfolio = () => {
-
   return (
     <div className="overflow-hidden">
       {PortfolioSEO}
@@ -29,11 +23,7 @@ const Portfolio = () => {
           <div className="d-flex align-items-center justify-content-center">
             <Breadcrumbs currentPage={"Portfolio"} />
           </div>
-          <Link
-            to={"/portfolio/"}
-            className="btn btn-light"
-            data-aos="zoom-in"
-          >
+          <Link to={"/portfolio/"} className="btn btn-light" data-aos="zoom-in">
             View Our Work
           </Link>
         </div>

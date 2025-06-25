@@ -62,6 +62,7 @@ const About = () => {
             <div className="col-lg-6 mb-4" data-aos="fade-right">
               <img
                 src={require("./../Gallery Images/img3.jpg")}
+                alt="about-image"
                 className="img-fluid rounded shadow story-img"
               />
             </div>
