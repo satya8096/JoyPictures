@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { phoneNumber, whatsappLink } from "../Data/BrandData";
+import { brandName, email, phoneNumber, whatsappLink } from "../Data/BrandData";
 
 const Footer = () => {
   return (
@@ -9,13 +9,12 @@ const Footer = () => {
         <div className="row text-md-left">
           {/* Branding & Intro */}
           <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
-            <h6 className="footer-title text-uppercase fw-bold">
-              Joypicturesstudio
-            </h6>
+            <h6 className="footer-title text-uppercase fw-bold">{brandName}</h6>
             <hr className="mb-2 mt-0 d-inline-block mx-auto hr-custom" />
             <p>
               Premier photography & videography studio in Bangalore. We
-              specialize in weddings, events, portraits, and promotional shoots.
+              specialize in Newborn Photography, Maternity Photography, Kids
+              Portraits, Family Portraits..
             </p>
           </div>
 
@@ -28,7 +27,7 @@ const Footer = () => {
             <ul className="list-unstyled">
               <li>
                 <Link to="/services/" title="Wedding Photography Bangalore">
-                  Wedding Photography
+                  Wedding
                 </Link>
               </li>
               <li>
@@ -46,7 +45,23 @@ const Footer = () => {
                   to="/services/"
                   title="Corporate & Branding Videos Bangalore"
                 >
-                  Branding Shoots
+                  Newborn
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/"
+                  title="Corporate & Branding Videos Bangalore"
+                >
+                  Maternity Photography
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/services/"
+                  title="Corporate & Branding Videos Bangalore"
+                >
+                  Family Portraits
                 </Link>
               </li>
             </ul>
@@ -58,24 +73,30 @@ const Footer = () => {
             <hr className="mb-2 mt-0 d-inline-block mx-auto hr-custom" />
             <ul className="list-unstyled">
               <li>
-                <a href="#portfolio" title="See Our Photography Work">
+                <Link to="/portfolio/" title="See Our Photography Work">
                   Portfolio
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" title="Know About Joypicturesstudio">
+                <Link to="/about/" title="Know About Joypicturestudio">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#contact" title="Contact Bangalore Photography Studio">
+                <Link
+                  to="/contact/"
+                  title="Contact Bangalore Photography Studio"
+                >
                   Contact
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#faq" title="Frequently Asked Questions">
+                <Link
+                  to="/services/"
+                  title="Frequently Asked Questions"
+                >
                   FAQs
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -88,8 +109,7 @@ const Footer = () => {
               <i className="fas fa-map-marker-alt me-2"></i> Bangalore, India
             </p>
             <p>
-              <i className="fas fa-envelope me-2"></i>{" "}
-              info@joypicturesstudio.com
+              <i className="fas fa-envelope me-2"></i> {email}
             </p>
             <p>
               <i className="fas fa-phone me-2"></i> +{phoneNumber}
@@ -100,7 +120,11 @@ const Footer = () => {
               </Link>
             </p>
             <p>
-              <i className="fab fa-instagram me-2"></i> @joypicturesstudio
+              <i className="fab fa-instagram me-2"></i>
+              <a href="https://www.instagram.com/joypictures_studio">
+                {" "}
+                @joypicturesstudio
+              </a>{" "}
             </p>
           </div>
         </div>
@@ -109,9 +133,8 @@ const Footer = () => {
         <div className="text-center mt-4">
           <p className="small mb-0">
             &copy; {new Date().getFullYear()}{" "}
-            <strong>Joypicturesstudio. All rights Reserved. </strong> | Created
-            with ❤️{" "}
-            <a href="https://nexgenwebdesigns.com">NexGen Web Designs</a>
+            <strong>{brandName}. All rights Reserved. </strong> | Created with
+            ❤️ by <a href="https://nexgenwebdesigns.com">NexGen Web Designs</a>
           </p>
         </div>
       </div>

@@ -75,3 +75,5 @@ export const faqData = [
       "Delivery time depends on the package and shoot type, but typically you’ll receive your fully edited photos within 10–15 working days and videos within 15–25 working days.",
   },
 ];
+
+

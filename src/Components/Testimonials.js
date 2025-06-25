@@ -12,7 +12,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="testimonial-section py-5 bg-light">
+    <section className="testimonial-section py-5">
       <div className="container">
         <h3 className="section-heading text-center mb-4 fw-bold">
           What Our Clients Say

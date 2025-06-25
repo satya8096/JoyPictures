@@ -63,24 +63,41 @@ h6 {
   margin: 10px auto 0;
   border-radius: 2px;
 }
-.loader-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: white;
+.loader-bg {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 9999;
 }
-.loader-wrapper p {
-  margin-top: 15px;
-  font-size: 1.2rem;
-  color: #333;
-  font-weight: 500;
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid #fff;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border-bottom: 4px solid #ff3d00;
+  border-left: 4px solid transparent;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Nav Bar Styles */
@@ -185,11 +202,11 @@ h6 {
 /* ======================= Home Page Styels =========================*/
 .hero-section {
   background: linear-gradient(to right, #1f1f1f36, #2d2d2d8d),
-    url("https://img.freepik.com/free-photo/bride-groom-couple-wedding_181624-37484.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740")
-      center center / cover no-repeat;
+    url("./Assets/269983640_449466720067439_3930302059865716722_n.jpg") center
+      center / cover no-repeat;
   background-attachment: fixed;
   color: #fff;
-  padding: 10rem 0rem;
+  padding: 15rem 0rem;
 }
 
 .hero-text .highlight {
@@ -208,16 +225,6 @@ h6 {
   transform: scale(1.03);
 }
 
-/* .btn-primary {
-  background-color: #ff5c5c;
-  border-color: #ff5c5c;
-}
-
-.btn-primary:hover {
-  background-color: #e14c4c;
-  border-color: #e14c4c;
-} */
-
 .btn-outline-light:hover {
   background-color: #fff;
   color: #000;
@@ -233,17 +240,6 @@ h6 {
     padding-top: 80px;
   }
 }
-
-/* Home Services */
-/* .services-section {
-  background: #f9f9f9;
-} */
-
-/* .section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #222;
-} */
 
 .section-subtitle {
   font-size: 1.1rem;
@@ -295,21 +291,10 @@ h6 {
   margin-top: 0.5rem;
 }
 
-/* Home Portfolio */
-/* .portfolio-section {
-  background-color: #fdfdfd;
-} */
-
 .section-header {
   max-width: 700px;
   margin: auto;
 }
-
-/* .section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1a1a1a;
-} */
 
 .section-subtitle {
   color: #666;
@@ -395,7 +380,6 @@ h6 {
 }
 /* Home About Styles */
 .about-section {
-  /* background: #f8f9fa; */
   padding: 80px 0;
   position: relative;
 }
@@ -458,88 +442,6 @@ h6 {
   font-size: 1rem;
   color: #444;
 }
-
-/* Home Pricing Cards */
-
-.pricing-section {
-  background: linear-gradient(180deg, #ffffff, #f8f9fa);
-}
-
-.pricing-card {
-  background: #fff;
-  border-radius: 16px;
-  padding: 2rem 1.5rem;
-  transition: all 0.3s ease;
-  position: relative;
-  border: 1px solid #eee;
-  height: 17rem;
-  width: 18rem;
-  margin: 1.5rem;
-}
-
-.pricing-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
-}
-
-.plan-title {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #222;
-  margin-bottom: 0.5rem;
-}
-
-.plan-price {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #ff5c5c;
-}
-.pricing-card-btn {
-  position: absolute;
-  bottom: -1.3em;
-  left: 4rem;
-  right: 4rem;
-}
-.plan-features li {
-  font-size: 0.95rem;
-  margin: 0.5rem 0;
-  color: #444;
-}
-
-.plan-features i {
-  color: #4caf50;
-  margin-right: 8px;
-}
-
-.btn {
-  border-radius: 25px;
-  padding: 0.6rem 1.5rem;
-  font-size: 0.95rem;
-}
-
-.recommended-badge {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background: #ff5c5c;
-  color: #fff;
-  padding: 5px 12px;
-  font-size: 0.75rem;
-  font-weight: bold;
-  border-radius: 5px;
-}
-.section-subtitle {
-  font-size: 1rem;
-  color: #666;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.carousel-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-/* Home Cta styles */
 .cta-section {
   position: relative;
   background: url("https://img.freepik.com/premium-photo/midsection-bride-holding-bouquet_1048944-21001415.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740")
@@ -594,7 +496,7 @@ h6 {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.testimonial-img{
+.testimonial-img {
   font-size: 4rem;
 }
 .testimonial-name {
@@ -673,7 +575,7 @@ h6 {
 /*========================= Services Page Styles ==============================*/
 .services-hero {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://img.freepik.com/free-photo/groom-gently-embracing-his-bride-forest_1153-5979.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740")
+    url("./Assets/241314643_1049791939158257_4051588339580399526_n.jpg")
       center center / cover no-repeat;
   padding: 15rem 0rem;
   background-attachment: fixed;
@@ -787,7 +689,7 @@ h6 {
 }
 
 .carousel-item img {
-  max-height: 400px;
+  max-height: 600px;
   object-fit: cover;
 }
 
@@ -804,16 +706,6 @@ h6 {
 }
 
 /* Faqs Styles */
-.faq-section {
-  background-color: #f9f9f9;
-}
-
-/* .section-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #333;
-} */
-
 .section-subtitle {
   color: #666;
   max-width: 700px;
@@ -847,7 +739,7 @@ h6 {
 /*============== Portfolio Styles=============== */
 .portfolio-hero-section {
   position: relative;
-  background-image: url("https://img.freepik.com/premium-photo/wedding-ceremony-area-arch-chairs-decor_419896-2101.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740");
+  background-image: url("./Assets/359112957_18014611117731650_2247612723151604974_n.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -883,6 +775,9 @@ h6 {
 }
 
 @media (max-width: 768px) {
+  .hero-section{
+    padding-top: 10rem;
+  }
   .portfolio-hero-section {
     height: 70vh;
   }
@@ -980,7 +875,6 @@ h6 {
 }
 
 .cta-heading {
-  font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 0.8rem;
   color: #fff;
@@ -990,12 +884,10 @@ h6 {
   background-color: #ff5c5c;
   color: #fff;
   padding: 12px 28px;
-  font-size: 1rem;
   font-weight: 600;
   border: none;
   border-radius: 50px;
   transition: all 0.3s ease;
-  text-transform: uppercase;
 }
 
 .btn-cta:hover {
@@ -1011,6 +903,7 @@ h6 {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url("https://img.freepik.com/free-photo/beautiful-bride-groom-walk-garden-after-wedding-ceremony_8353-6654.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740")
       no-repeat center center;
+  background-attachment: fixed;
   background-size: cover;
   color: #fff;
   padding: 14rem 0.5rem;
@@ -1104,18 +997,6 @@ h6 {
   box-shadow: 0 0 0 0.1rem rgba(255, 92, 92, 0.25);
 }
 
-/* .btn-danger {
-  border-radius: 10px;
-  font-weight: 600;
-  padding: 12px;
-  background-color: #ff5c5c;
-  border: none;
-}
-
-.btn-danger:hover {
-  background-color: #e04a4a;
-} */
-
 /* Section styling */
 
 .location-card {
@@ -1148,16 +1029,6 @@ h6 {
   color: #ff5c5c;
 }
 
-.map-wrapper {
-  background: #fafafa;
-}
-
-/* Heading highlight */
-/* .section-title .highlight {
-  color: #ff5c5c;
-} */
-
-/* Map card container */
 .map-card {
   height: 420px;
   border: 4px solid #fff;
@@ -1208,7 +1079,6 @@ h6 {
 }
 
 .social-media-section {
-  background: #f8f9fa;
   padding: 60px 20px;
   border-top: 1px solid #e0e0e0;
 }
@@ -1249,8 +1119,9 @@ h6 {
 /* =========================== About Page Styles ============================== */
 .about-hero-section {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://img.freepik.com/free-photo/bride-groom-holding-hands_1004-11.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740")
+    url("https://img.freepik.com/free-vector/silhouette-loving-couple-bokeh-lights-background_1048-8734.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740")
       center/cover no-repeat;
+  background-attachment: fixed;
   padding: 17rem 0.3rem;
   position: relative;
 }
@@ -1265,45 +1136,6 @@ h6 {
   color: #777;
   font-size: 1rem;
 }
-
-.team-card {
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
-}
-
-.team-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.team-img {
-  height: 300px;
-  object-fit: cover;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-.card-title {
-  font-size: 1.2rem;
-  color: #222;
-}
-
-.card-text {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.social-icons a {
-  color: #ff5c5c;
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #e43c3c;
-}
-
 .why-choose-us-section {
   background-color: #f9f9f9;
 }
@@ -1346,37 +1178,31 @@ h6 {
   color: #555;
 }
 
-.cta-booking {
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  background-size: 200% 200%;
-  animation: gradientShift 10s ease infinite;
+.about-cta-section {
+  background-color: #fdf8ef;
+  border-top: 2px solid #fceabb;
+  border-bottom: 2px solid #fceabb;
 }
 
-.cta-inner {
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+.cta-subtext {
+  font-size: 1.1rem;
+  color: #555;
   max-width: 700px;
-  border-radius: 1.5rem;
+  margin: 0 auto;
 }
 
-.cta-heading {
-  font-size: 1.8rem;
+.btn-warning {
+  background-color: #f1c40f;
+  border: none;
+  color: #fff;
   font-weight: 600;
-  color: #ffffff;
+  transition: all 0.3s ease;
 }
 
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.btn-warning:hover {
+  background-color: #d4ac0d;
 }
+
 
 /* ========Top and Whatsapp Buttons=======*/
 .floating-buttons {
@@ -1403,7 +1229,6 @@ h6 {
 }
 
 .top-button:hover {
-  /* background-color: #388e3c; */
   transform: scale(1.1);
 }
 
@@ -1415,4 +1240,233 @@ h6 {
 
 .whatsapp-button:hover img {
   transform: scale(1.1);
+}
+
+.team-avatar {
+  text-align: center;
+  position: relative;
+  transition: transform 0.4s ease;
+  padding: 1rem;
+}
+
+.avatar-circle {
+  margin: 0.3rem auto;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-details h4 {
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.team-details p {
+  margin-bottom: 0.2rem;
+  color: #777;
+}
+
+.team-details small {
+  color: #999;
+}
+
+
+
+
+
+
+.pricingTable{
+  background: #fff;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  padding: 30px 15px 15px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  width: 18rem;
+  height: 26rem;
+  margin: 1rem 0.5rem;
+}
+.pricingTable:before,
+.pricingTable:after{
+  content: '';
+  background: linear-gradient(-45deg,#5A98FB,#5A98FB,#3F64FA,#3F64FA);
+  height: 170px;
+  width: 150%;
+  outline: 5px solid #fff;
+  outline-offset: -10px;
+  opacity: 0.9;
+  transform: translateX(-50%) rotate(7deg);
+  position: absolute;
+  left: 50%;
+  top: -65px;
+  z-index: -1;
+}
+.pricingTable:after{
+  height: 250px;
+  transform: translateX(-50%) rotate(-20deg) rotateX(180deg);
+  top: auto;
+  bottom: -150px;
+}
+.pricingTable .pricingTable-header{
+  color:#fff;
+  margin: 0 0 75px;
+}
+.pricingTable .title{
+  font-size: 40px;
+  font-weight: 700;
+  text-transform:uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+.pricingTable .pricing-content{
+  text-align: left;
+  padding: 0;
+  margin: 0 0 10px;
+  display: inline-block;
+}
+.pricingTable .pricing-content li{
+  color: #333;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 22px;
+  padding: 0 40px 0 0;
+  margin: 0 0 15px;
+  list-style-position: inside;
+  position: relative;
+}
+.pricingTable .pricing-content li:after{
+  content: "\f00c";
+  color: #e58e26;
+  font-family: "Font Awesome 5 Free";
+  font-size: 18px;
+  font-weight: 900;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.pricingTable .pricing-content li.disable:after{ content: "\f00d"; }
+.pricingTable .price-value{ margin: 0 0 15px; }
+.pricingTable .price-title{
+  color:#333;
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 30px;
+  width: calc(100% - 130px);
+  padding: 15px 0 0;
+  display: inline-block;
+}
+.pricingTable .price-title b{ display: block; }
+.pricingTable .price-amount{
+  color: #3F64FA;
+  background: #fff;
+  font-weight: 700;
+  line-height: 30px;
+  width: 120px;
+  height: 120px;
+  padding: 33px 10px 10px;
+  display: inline-block;
+  vertical-align: top;
+  clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+  position: relative;
+  z-index: 1;
+}
+.pricingTable .price-amount:before,
+.pricingTable .price-amount:after{
+  content: "";
+  background: linear-gradient(-45deg,#5A98FB,#5A98FB,#3F64FA,#3F64FA);
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  transform:  translateX(-50%) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+}
+.pricingTable .price-amount:after{
+  background: #fff;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+}
+.pricingTable .price-amount .duration{
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: block;
+}
+.pricingTable .pricingTable-signup a{
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.1rem 0.5rem;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.pricingTable .pricingTable-signup a:hover{
+  text-shadow: 3px 3px 1px rgba(0,0,0,0.5);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+}
+.pricingTable.green:before,
+.pricingTable.green:after,
+.pricingTable.green .price-amount:before{
+  background: linear-gradient(-45deg,#76D243,#76D243,#109739,#109739);
+}
+.pricingTable.green .price-amount{ color: #109739; }
+.pricingTable.pink:before,
+.pricingTable.pink:after,
+.pricingTable.pink .price-amount:before{
+  background: linear-gradient(-45deg,#E969A6,#E969A6,#ED2E96,#ED2E96);
+}
+/* Blue Theme */
+.pricingTable.blue:before,
+.pricingTable.blue:after,
+.pricingTable.blue .price-amount:before {
+  background: linear-gradient(-45deg, #42a5f5, #42a5f5, #1e88e5, #1e88e5);
+}
+
+
+/* Orange Theme */
+.pricingTable.orange:before,
+.pricingTable.orange:after,
+.pricingTable.orange .price-amount:before {
+  background: linear-gradient(-45deg, #ffa726, #ffa726, #fb8c00, #fb8c00);
+}
+
+
+/* Purple Theme */
+.pricingTable.purple:before,
+.pricingTable.purple:after,
+.pricingTable.purple .price-amount:before {
+  background: linear-gradient(-45deg, #ba68c8, #ba68c8, #8e24aa, #8e24aa);
+}
+
+
+/* Teal Theme */
+.pricingTable.teal:before,
+.pricingTable.teal:after,
+.pricingTable.teal .price-amount:before {
+  background: linear-gradient(-45deg, #4db6ac, #4db6ac, #00897b, #00897b);
+}
+
+/* Red Theme */
+.pricingTable.red:before,
+.pricingTable.red:after,
+.pricingTable.red .price-amount:before {
+  background: linear-gradient(-45deg, #ef5350, #ef5350, #d32f2f, #d32f2f);
+}
+
+
+.pricingTable.pink .price-amount{ color: #ED2E96; }
+@media only screen and (max-width: 990px){
+  .pricingTable{ margin: 0 0 40px; }
 }

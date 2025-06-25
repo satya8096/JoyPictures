@@ -5,11 +5,10 @@ import WhyChooseUs from "../Components/WhyChooseUs";
 import { HomeSEO } from "../Data/AllPagesSEO";
 import { services } from "../Data/ServicesPageData";
 import Testimonials from "../Components/Testimonials";
-import { whatsappLink } from "../Data/BrandData";
+import { brandName, whatsappLink } from "../Data/BrandData";
+import ImagesCarosoul from "../Components/ImagesCarosoul";
 
 const Home = () => {
-
-
   return (
     <div className="overflow-hidden">
       {HomeSEO}
@@ -22,21 +21,21 @@ const Home = () => {
                 Capturing <span className="highlight">Moments</span> That Matter
               </h2>
               <p className="mt-3">
-                Joypicturesstudio – Bangalore’s premium photography &
-                videography studio. Specializing in weddings, portraits, and
-                corporate events.
+                {brandName} – Bangalore’s premium photography & videography
+                studio. Specializing in Newborn Photography, Maternity
+                Photography, Kids Portraits, Family Portraits.
               </p>
               <div className="mt-4">
                 <Link
                   to="/portfolio/"
-                  className="btn btn-primary btn-lg me-3 mb-3"
-                  title="View Portfolio of Joypicturesstudio"
+                  className="btn btn-primary me-3 mb-3"
+                  title="View Portfolio of Joypicturestudio"
                 >
                   <i className="fas fa-images me-2"></i> View Portfolio
                 </Link>
                 <Link
                   to="/contact/"
-                  className="btn btn-light btn-lg mb-3"
+                  className="btn btn-light mb-3"
                   title="Book a Photoshoot in Bangalore"
                 >
                   <i className="fas fa-calendar-check me-2"></i> Book Now
@@ -50,7 +49,7 @@ const Home = () => {
               data-aos="fade-left"
             >
               <img
-                src={require("./../Assets/home_page_img1.jpg")}
+                src={require("./../Gallery Images/img14.jpg")}
                 alt="Photographer capturing wedding in Bangalore"
                 className="img-fluid hero-img"
               />
@@ -95,98 +94,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="portfolio" className="portfolio-section py-5">
-        <div className="container">
-          {/* Section Heading */}
-          <div className="section-header text-center mb-5">
-            <h3 className="section-heading" data-aos="fade">
-              Featured Works
-            </h3>
-            <p className="section-subtitle" data-aos="fade">
-              Handpicked moments from weddings, events, and portraits across
-              Bangalore.
-            </p>
-          </div>
-
-          {/* Portfolio Carousel */}
-          <div
-            id="portfolioCarousel"
-            className="carousel slide portfolio-carousel"
-            data-bs-ride="carousel"
-            data-aos="fade"
-          >
-            <div className="carousel-inner">
-              {/* Carousel Item 1 */}
-              <div className="carousel-item active">
-                <img
-                  src="https://img.freepik.com/premium-photo/wedding-couple-stairs-park_240347-105.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740"
-                  className="d-block w-100 portfolio-image"
-                  alt="Wedding photography by Joypicturesstudio in Bangalore"
-                />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>Wedding Elegance</h5>
-                  <p>
-                    Capturing timeless love stories in Bangalore’s top wedding
-                    venues.
-                  </p>
-                </div>
-              </div>
-
-              {/* Carousel Item 2 */}
-              <div className="carousel-item">
-                <img
-                  src="https://img.freepik.com/free-photo/married-couple-nature-full-shot_23-2149617142.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740"
-                  className="d-block w-100 portfolio-image"
-                  alt="Event videography Bangalore by Joypicturesstudio"
-                />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>Event Grandeur</h5>
-                  <p>High-energy event coverage with cinematic flair.</p>
-                </div>
-              </div>
-
-              {/* Carousel Item 3 */}
-              <div className="carousel-item">
-                <img
-                  src="https://img.freepik.com/premium-photo/beautiful-bride-groom-posing-near-lake-sunset_266716-91.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740"
-                  className="d-block w-100 portfolio-image"
-                  alt="Portrait session in Bangalore studio"
-                />
-                <div className="carousel-caption d-none d-md-block">
-                  <h5>Portrait Masterpiece</h5>
-                  <p>Studio perfection with creative lighting and style.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Carousel Controls */}
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#portfolioCarousel"
-              data-bs-slide="prev"
-            >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#portfolioCarousel"
-              data-bs-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </section>
+      <ImagesCarosoul />
       <WhyChooseUs />
       <section id="about" className="about-section section-padding">
         <div className="container">
@@ -225,11 +133,11 @@ const Home = () => {
                   Crafting Visual Memories Since 2015
                 </h3>
                 <p className="about-section__text">
-                  At Joypicturesstudio, we go beyond just clicking pictures — we
-                  craft timeless visual stories. Based in Bangalore, our
-                  creative team specializes in cinematic wedding shoots, candid
-                  portraits, high-end event coverage, and modern branding
-                  visuals for individuals and businesses alike.
+                  At {brandName}, we go beyond just clicking pictures — we craft
+                  timeless visual stories. Based in Bangalore, our creative team
+                  specializes in cinematic wedding shoots, candid portraits,
+                  high-end event coverage, and modern branding visuals for
+                  individuals and businesses alike.
                 </p>
                 <ul className="about-section__features list-unstyled">
                   <li>
@@ -266,13 +174,13 @@ const Home = () => {
             Capturing Emotions, Crafting Stories
           </h3>
           <p className="cta-subheading" data-aos="zoom-in">
-            Book your session with <strong>Joypicturesstudio</strong> –
-            Bangalore’s premier photography & videography team.
+            Book your session with <strong>{brandName}</strong> – Bangalore’s
+            premier photography & videography team.
           </p>
           <Link
             to={"/contact/"}
             className="btn btn-cta mt-3"
-            title="Contact Joypicturesstudio in Bangalore"
+            title="Contact Joypicturestudio in Bangalore"
             data-aos="zoom-in"
           >
             <i className="fas fa-calendar-check me-2"></i> Book Your Shoot Now
@@ -311,7 +219,7 @@ const Home = () => {
                     elegance and emotion. Perfect for Bangalore couples.
                   </p>
                   <a
-                    href="#blog1"
+                    href="/"
                     className="read-more"
                     title="Read Wedding Photography Tips"
                   >
@@ -338,7 +246,7 @@ const Home = () => {
                     story-driven images that speak volumes.
                   </p>
                   <a
-                    href="#blog2"
+                    href="/"
                     className="read-more"
                     title="Learn Candid Photography Bangalore"
                   >
@@ -365,7 +273,7 @@ const Home = () => {
                     quality — ideal for shoots across Bangalore.
                   </p>
                   <a
-                    href="#blog3"
+                    href="/"
                     className="read-more"
                     title="Photography Gear Guide Bangalore"
                   >

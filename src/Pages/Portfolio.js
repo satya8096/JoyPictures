@@ -5,6 +5,7 @@ import { PortfolioSEO } from "../Data/AllPagesSEO";
 import Testimonials from "../Components/Testimonials";
 import Breadcrumbs from "../Components/Breadcrumbs";
 import Gallery from "../Components/Gallery";
+import { brandName } from "../Data/BrandData";
 
 const Portfolio = () => {
   return (
@@ -20,7 +21,10 @@ const Portfolio = () => {
             Discover our curated portfolio of wedding, event, and portrait
             photography in Bangalore.
           </p>
-          <div className="d-flex align-items-center justify-content-center">
+          <div
+            className="d-flex align-items-center justify-content-center"
+            data-aos="fade"
+          >
             <Breadcrumbs currentPage={"Portfolio"} />
           </div>
           <Link to={"/portfolio/"} className="btn btn-light" data-aos="zoom-in">
@@ -43,7 +47,7 @@ const Portfolio = () => {
 
         <Gallery />
       </section>
-      <section className="project-highlights-section py-5 bg-light">
+      <section className="project-highlights-section py-5">
         <div className="container">
           <h3
             className="section-heading text-center mb-5 fw-bold"
@@ -69,9 +73,9 @@ const Portfolio = () => {
               <div className="col-md-6" data-aos="fade-left">
                 <h4 className="fw-bold mb-3 mt-3">{project.title}</h4>
                 <p>{project.description}</p>
-                <a href={project.link} className="btn btn-danger mt-2">
+                <Link to={project.link} className="btn btn-danger mt-2">
                   {project.cta}
-                </a>
+                </Link>
               </div>
             </div>
           ))}
@@ -85,7 +89,7 @@ const Portfolio = () => {
           </h3>
           <p className="" data-aos="fade-left">
             Let’s create timeless memories together. Book your next shoot with{" "}
-            <strong>Joypicturesstudio</strong> — Bangalore’s trusted name in
+            <strong>{brandName}</strong> — Bangalore’s trusted name in
             photography and videography.
           </p>
           <Link to="/contact/" className="btn btn-cta mt-3" data-aos="zoom-in">

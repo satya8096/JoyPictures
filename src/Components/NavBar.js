@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+import { brandName } from "../Data/BrandData";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -21,10 +22,10 @@ const Navbar = () => {
       const offset = window.scrollY;
       setScrolled(offset > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  
   return (
     <nav
       className={`navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top ${
@@ -36,10 +37,10 @@ const Navbar = () => {
         <NavLink
           to="/"
           className="navbar-brand d-flex align-items-center"
-          title="Joypicturesstudio - Photography and Videography in Bangalore"
+          title="Joypicturestudio - Photography and Videography in Bangalore"
         >
           <i className="fas fa-camera-retro me-2 logo-icon"></i>
-          <span className="brand-text">Joypicturesstudio</span>
+          <span className="brand-text">{brandName}</span>
         </NavLink>
 
         {/* Toggle button */}
@@ -62,7 +63,7 @@ const Navbar = () => {
               <NavLink
                 to="/"
                 className="nav-link"
-                title="Home - Joypicturesstudio"
+                title="Home - Joypicturestudio"
                 onClick={handleNavCollapse}
               >
                 Home
@@ -82,7 +83,7 @@ const Navbar = () => {
               <NavLink
                 to="/portfolio"
                 className="nav-link"
-                title="View Portfolio - Joypicturesstudio"
+                title="View Portfolio - Joypicturestudio"
                 onClick={handleNavCollapse}
               >
                 Portfolio
@@ -92,7 +93,7 @@ const Navbar = () => {
               <NavLink
                 to="/about"
                 className="nav-link"
-                title="About Joypicturesstudio in Bangalore"
+                title="About Joypicturestudio in Bangalore"
                 onClick={handleNavCollapse}
               >
                 About
@@ -102,7 +103,7 @@ const Navbar = () => {
               <NavLink
                 to="/contact"
                 className="nav-link"
-                title="Contact Joypicturesstudio - Book Now"
+                title="Contact Joypicturestudio - Book Now"
                 onClick={handleNavCollapse}
               >
                 Contact

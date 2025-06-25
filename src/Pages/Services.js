@@ -5,6 +5,8 @@ import PricingPackage from "../Components/PricingPackage";
 import WhyChooseUs from "../Components/WhyChooseUs";
 import { ServiceSEO } from "../Data/AllPagesSEO";
 import Breadcrumbs from "./../Components/Breadcrumbs";
+import { brandName, whatsappLink } from "../Data/BrandData";
+import ImagesCarosoul from "../Components/ImagesCarosoul";
 
 const Services = () => {
   return (
@@ -24,24 +26,27 @@ const Services = () => {
             Professional Photography & Videography Services in Bangalore
           </h2>
           <p className="lead mt-3 mb-4" data-aos="fade-left">
-            Capture your life's most cherished moments with Joypicturesstudio –
-            From weddings to corporate shoots, we bring your story to life
-            through the lens.
+            Capture your life's most cherished moments with {brandName} – From
+            weddings to corporate shoots, we bring your story to life through
+            the lens.
           </p>
-          <div className="d-flex align-items-center justify-content-center">
+          <div
+            className="d-flex align-items-center justify-content-center"
+            data-aos="fade"
+          >
             <Breadcrumbs currentPage={"Services & Pricing"} />
           </div>
           <div>
             <Link
               to="/services/"
-              className="btn btn-danger btn-lg me-2 mb-3"
+              className="btn btn-danger me-2 mb-3"
               data-aos="zoom-in"
             >
               <i className="fas fa-camera me-2"></i>Explore Services
             </Link>
             <Link
               to="/contact/"
-              className="btn btn-light btn-lg mb-3"
+              className="btn btn-light mb-3"
               data-aos="zoom-in"
             >
               <i className="fas fa-phone-alt me-2"></i>Book Now
@@ -86,101 +91,8 @@ const Services = () => {
       </section>
       <WhyChooseUs />
       <PricingPackage />
-      <section
-        className="portfolio-preview-section py-5 bg-light"
-        id="portfolio-preview"
-      >
-        <div className="container">
-          <div className="text-center mb-4">
-            <h3 className="section-heading" data-aos="fade">
-              Our Portfolio Highlights
-            </h3>
-            <p className="section-subtitle" data-aos="fade">
-              A glimpse into the moments we’ve captured across Bangalore —
-              weddings, maternity shoots, events & more.
-            </p>
-          </div>
-
-          <div
-            id="portfolioCarousel"
-            className="carousel slide carousel-dark"
-            data-bs-ride="carousel"
-            data-aos="fade"
-          >
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img
-                  src="https://img.freepik.com/free-photo/groom-gently-embracing-his-bride-forest_1153-5979.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740"
-                  className="d-block w-100 img-fluid rounded"
-                  alt="Candid Wedding Photography in Bangalore"
-                  title="Candid Wedding Photography in Bangalore"
-                />
-              </div>
-              <div className="carousel-item">
-                <img
-                  src="https://img.freepik.com/free-photo/bridal-couple-hugging-field_1139-342.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&w=740"
-                  className="d-block w-100 img-fluid rounded"
-                  alt="Maternity Photoshoot in Bangalore"
-                  title="Maternity Photoshoot in Bangalore"
-                />
-              </div>
-              <div className="carousel-item">
-                <img
-                  src="https://img.freepik.com/premium-photo/nature-outdoor-couple-with-love-wedding-bonding-with-happiness-relationship-embrace-partners-bride-groom-outdoor-park-hug-with-marriage-loving-romance-with-celebration_590464-191750.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&w=740"
-                  className="d-block w-100 img-fluid rounded"
-                  alt="Event Videography Bangalore"
-                  title="Event Videography Bangalore"
-                />
-              </div>
-            </div>
-
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#portfolioCarousel"
-              data-bs-slide="prev"
-            >
-              <span
-                className="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#portfolioCarousel"
-              data-bs-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span className="visually-hidden">Next</span>
-            </button>
-          </div>
-
-          <div className="text-center mt-4">
-            <a
-              href="/portfolio/"
-              className="btn btn-outline-danger me-3 mb-3"
-              title="See Full Wedding Photography Album"
-              data-aos="zoom-in"
-            >
-              View Wedding Album
-            </a>
-            <a
-              href="/portfolio/"
-              className="btn btn-outline-secondary mb-3"
-              title="Explore Maternity & Family Shoots"
-              data-aos="zoom-in"
-            >
-              See Maternity Shoot
-            </a>
-          </div>
-        </div>
-      </section>
-      <section className="faq-section py-5 bg-light" id="faqs">
+      <ImagesCarosoul />
+      <section className="faq-section py-5" id="faqs">
         <div className="container">
           <div className="text-center mb-4">
             <h3 className="section-heading" data-aos="fade">
@@ -225,32 +137,32 @@ const Services = () => {
         </div>
       </section>
       <section
-        className="cta-section py-5 text-center bg-light"
+        className="cta-section py-5 text-center bg-ligh"
         id="cta-booking"
       >
         <div className="container">
-          <h2 className="cta-heading mb-3" data-aos="fade">
+          <h3 className="cta-heading mb-3 fw-bold" data-aos="fade">
             ✨ Ready to create stunning memories?
-          </h2>
+          </h3>
           <p className="cta-subtext text-white mb-4" data-aos="fade">
-            Book your session with Joypicturesstudio – Bangalore’s trusted
-            photography & videography team.
+            Book your session with {brandName} – Bangalore’s trusted photography
+            & videography team.
           </p>
           <div className="cta-buttons">
             <Link
               to="/contact/"
-              className="btn btn-danger btn-lg me-3 mb-3"
+              className="btn btn-danger me-3 mb-3"
               title="Book your photography session in Bangalore"
               data-aos="fade"
             >
               📅 Book Your Session
             </Link>
             <Link
-              to="https://wa.me/919876543210"
-              className="btn btn-light btn-lg mb-3"
+              to={whatsappLink}
+              className="btn btn-light mb-3"
               target="_blank"
               rel="noopener noreferrer"
-              title="WhatsApp Joypicturesstudio"
+              title="WhatsApp Joypicturestudio"
               data-aos="fade"
             >
               💬 WhatsApp Us Now

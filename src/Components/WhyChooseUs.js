@@ -1,5 +1,6 @@
 import React from "react";
 import { features } from "../Data/ServicesPageData";
+import { brandName } from "../Data/BrandData";
 
 const WhyChooseUs = () => {
   return (
@@ -7,7 +8,7 @@ const WhyChooseUs = () => {
       <section id="why-choose" className="why-choose-section py-5">
         <div className="container text-center">
           <h3 className="section-heading mb-4" data-aos="fade">
-            Why Choose Joypicturesstudio ?
+            Why Choose {brandName} ?
           </h3>
           <p className="section-subtitle mb-5" data-aos="fade">
             Discover what sets our photography and videography services apart in

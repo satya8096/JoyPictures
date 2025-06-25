@@ -1,6 +1,6 @@
 export const testimonialsData = [
   {
-    text: "“Joypicturesstudio captured every emotion at our wedding beautifully. The team was professional, punctual, and incredibly creative.”",
+    text: "“Joypicturestudio captured every emotion at our wedding beautifully. The team was professional, punctual, and incredibly creative.”",
     name: "Shruti & Ankit",
     location: "Wedding Shoot – Bangalore",
   },
@@ -10,7 +10,7 @@ export const testimonialsData = [
     location: "Corporate Branding",
   },
   {
-    text: "“Our maternity shoot was magical. Every photo was like a dream. They made us feel so comfortable. Thank you Joypicturesstudio!”",
+    text: "“Our maternity shoot was magical. Every photo was like a dream. They made us feel so comfortable. Thank you Joypicturestudio!”",
     name: "Neha R.",
     location: "Maternity Shoot – Bangalore",
   },

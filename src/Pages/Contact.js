@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { email, phoneNumber, whatsappLink } from "../Data/BrandData";
+import { brandName, email, phoneNumber, whatsappLink } from "../Data/BrandData";
 import { ContactSEO } from "../Data/AllPagesSEO";
 import Breadcrumbs from "../Components/Breadcrumbs";
 
@@ -64,13 +64,16 @@ const Contact = () => {
         <div className="contact-header-overlay"></div>
         <div className="contact-header-content">
           <h2 className="contact-header-title" data-aos="fade-right">
-            Contact Joypicturesstudio
+            Contact {brandName}
           </h2>
           <p className="contact-header-subtitle" data-aos="fade-left">
             Have questions or want to book a session? <br />
             Reach out to our Bangalore-based photography & videography experts.
           </p>
-          <div className="d-flex align-items-center justify-content-center">
+          <div
+            className="d-flex align-items-center justify-content-center"
+            data-aos="fade"
+          >
             <Breadcrumbs currentPage={"Contact"} />
           </div>
           <Link to={whatsappLink} className="btn btn-danger" data-aos="zoom-in">
@@ -78,7 +81,7 @@ const Contact = () => {
           </Link>
         </div>
       </section>
-      <section className="d-none contact-info-section py-5">
+      {/* <section className="d-none contact-info-section py-5">
         <div className="container">
           <div className="row text-center g-4">
             <div className="col-md-4">
@@ -120,7 +123,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="branch-section py-5">
         <div className="container">
           <h3 className="text-center section-heading mb-4" data-aos="fade">
@@ -214,7 +217,7 @@ const Contact = () => {
       <section id="location" className="map-wrapper py-5">
         <div className="container">
           <h3 className="section-heading text-center mb-4" data-aos="fade">
-            Find Joypicturesstudio in Bangalore
+            Find {brandName} in Bangalore
           </h3>
 
           {/* Map Card */}
@@ -226,14 +229,14 @@ const Contact = () => {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Joypicturesstudio Location - Bangalore"
+              title="Joypicturestudio Location - Bangalore"
               data-aos="fade"
             ></iframe>
             <div
               className="map-badge d-none d-md-flex flex-column gap-1 text-start"
               data-aos="fade"
             >
-              <div className="fw-semibold">Joypicturesstudio</div>
+              <div className="fw-semibold">{brandName}</div>
               <small>
                 4/1, 4/1, Tumkur Rd, Yeshwanthpur Industrial Area, Phase 1,
                 Yeswanthpur, Bengaluru, Karnataka 560022
@@ -253,7 +256,7 @@ const Contact = () => {
       </section>
       <section className="social-media-section text-center py-5">
         <h3 className="section-heading" data-aos="fade">
-          Follow Joypicturesstudio
+          Follow {brandName}
         </h3>
         <p className="section-subtitle" data-aos="fade">
           Stay connected for our latest photography & videography projects in
@@ -262,7 +265,7 @@ const Contact = () => {
 
         <div className="social-icons d-flex justify-content-center mt-4">
           <a
-            href="https://instagram.com/joypicturesstudio"
+            href="https://www.instagram.com/joypictures_studio"
             className="social-icon instagram"
             title="Follow us on Instagram"
             target="_blank"
@@ -272,7 +275,7 @@ const Contact = () => {
             <i className="fab fa-instagram"></i>
           </a>
           <a
-            href="https://facebook.com/joypicturesstudio"
+            href="https://www.facebook.com/TeamJoyPictures/"
             className="social-icon facebook"
             title="Connect on Facebook"
             target="_blank"
@@ -282,7 +285,7 @@ const Contact = () => {
             <i className="fab fa-facebook-f"></i>
           </a>
           <a
-            href="https://youtube.com/@joypicturesstudio"
+            href="https://www.youtube.com/@joypicturesstudio2603"
             className="social-icon youtube"
             title="Subscribe on YouTube"
             target="_blank"

@@ -1,19 +1,33 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
+import React, { Suspense, useEffect, lazy } from "react";
 import "./App.css";
-import Navbar from "./Components/NavBar";
-import Footer from "./Components/Footer";
-import Home from "./Pages/Home";
-import Services from "./Pages/Services";
-import Portfolio from "./Pages/Portfolio";
-import Contact from "./Pages/Contact";
-import About from "./Pages/About";
-import FloatingButtons from "./Components/TopAndWhatsAppButton";
+
+const Navbar = lazy(() => import("./Components/NavBar"));
+const Footer = lazy(() => import("./Components/Footer"));
+const FloatingButtons = lazy(() => import("./Components/TopAndWhatsAppButton"));
+const Home = lazy(() => import("./Pages/Home"));
+const Services = lazy(() => import("./Pages/Services"));
+const Portfolio = lazy(() => import("./Pages/Portfolio"));
+const Contact = lazy(() => import("./Pages/Contact"));
+const About = lazy(() => import("./Pages/About"));
 
 function App() {
+  const location = useLocation().pathname;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
-    <div>
+    <Suspense
+      fallback={
+        <div className="loader-bg bg-dark">
+          <span class="loader"></span>
+        </div>
+      }
+    >
       <Navbar />
-      <FloatingButtons/>
+      <FloatingButtons />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services/" element={<Services />} />
@@ -22,7 +36,7 @@ function App() {
         <Route path="/about/" element={<About />} />
       </Routes>
       <Footer />
-    </div>
+    </Suspense>
   );
 }
 
