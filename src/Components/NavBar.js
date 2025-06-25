@@ -30,7 +30,6 @@ const Navbar = () => {
       className={`navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top ${
         scrolled ? "navbar-scrolled" : ""
       }`}
-      // data-aos="fade-down"
     >
       <div className="container">
         {/* Logo and Brand */}

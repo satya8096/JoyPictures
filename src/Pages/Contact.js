@@ -1,31 +1,65 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { whatsappLink } from "../Data/BrandData";
+import { email, phoneNumber, whatsappLink } from "../Data/BrandData";
+import { ContactSEO } from "../Data/AllPagesSEO";
+import Breadcrumbs from "../Components/Breadcrumbs";
 
 const branches = [
   {
-    name: "Main Studio - Indiranagar",
-    address: "No. 23, 2nd Cross, 5th Main, Indiranagar, Bangalore - 560038",
-    phone: "+91 98765 43210",
-    email: "indiranagar@joypicturesstudio.com",
+    name: "Joy Pictures Studio Yeshwantpur",
+    address:
+      "4/1, 4/1, Tumkur Rd, Yeshwanthpur Industrial Area, Phase 1, Yeswanthpur, Bengaluru, Karnataka 560022",
+    phone: phoneNumber,
+    email: email,
   },
   {
-    name: "South Studio - JP Nagar",
-    address: "14th Cross Rd, JP Nagar 7th Phase, Bangalore - 560078",
-    phone: "+91 99887 65432",
-    email: "jpnagar@joypicturesstudio.com",
+    name: "Joy Pictures Studio",
+    address:
+      "17, 14th Main Rd, Kamalanagar, Sriram Nagar, Chamrajpet, Bengaluru, Karnataka 560018",
+    phone: phoneNumber,
+    email: email,
   },
   {
-    name: "East Studio - Whitefield",
-    address: "Prestige Shantiniketan, Whitefield, Bangalore - 560066",
-    phone: "+91 98760 32145",
-    email: "whitefield@joypicturesstudio.com",
+    name: "Joy Pictures Studio",
+    address:
+      "20/13, Sarjapur - Marathahalli Rd, Carmelaram, Janatha Colony, Doddakannelli, Bengaluru, Karnataka 560035",
+    phone: phoneNumber,
+    email: email,
+  },
+  {
+    name: "Joy Pictures Newborn & Maternity Studio",
+    address:
+      "329, 7th Cross Rd, Kalyan Nagar, Nagarbhavi 1st Stage, Chandra Layout Extension II Stage, Chandra Layout, Bengaluru, Karnataka 560072",
+    phone: phoneNumber,
+    email: email,
+  },
+  {
+    name: "Joy Pictures Studio",
+    address:
+      "Pillar No 500, Metro Station Nagasandra, Bagalakunte, Bengaluru, Karnataka 560073",
+    phone: phoneNumber,
+    email: email,
+  },
+  {
+    name: "Joy Pictures Studio",
+    address:
+      "916/A, 80 Feet Rd, next to Atreum Speciality Hospital, Entrance, Rajarajeshwari Nagar, Bengaluru, Karnataka 560098",
+    phone: phoneNumber,
+    email: email,
+  },
+  {
+    name: "Joy Pictures Studio RR Nagar",
+    address:
+      "first SBI Bank, 915, Remco Bhel Layout, Ideal Homes Twp, Rajarajeshwari Nagar, Bengaluru, Karnataka 560098",
+    phone: phoneNumber,
+    email: email,
   },
 ];
 
 const Contact = () => {
   return (
     <div className="overflow-hidden">
+      {ContactSEO}
       <section className="contact-header-section d-flex align-items-center justify-content-center text-center">
         <div className="contact-header-overlay"></div>
         <div className="contact-header-content">
@@ -36,9 +70,12 @@ const Contact = () => {
             Have questions or want to book a session? <br />
             Reach out to our Bangalore-based photography & videography experts.
           </p>
+          <div className="d-flex align-items-center justify-content-center">
+            <Breadcrumbs currentPage={"Contact"} />
+          </div>
           <Link
             to={whatsappLink}
-            className="btn btn-danger mt-4"
+            className="btn btn-danger"
             data-aos="zoom-in"
           >
             <i className="fas fa-envelope-open-text me-2"></i> Send a Message
@@ -109,7 +146,7 @@ const Contact = () => {
                     <p className="card-text">
                       <i className="fas fa-phone-alt me-2 text-muted"></i>
                       <a href={`tel:${branch.phone}`} className="text-dark">
-                        {branch.phone}
+                        +{branch.phone}
                       </a>
                     </p>
                     <p className="card-text">
@@ -189,27 +226,24 @@ const Contact = () => {
             {/* Google Maps Iframe */}
             <iframe
               className="map-iframe"
-              src="https://www.google.com/maps/embed?pb=..." /* ← replace with real embed URL */
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248775.66603468746!2d77.25551678671876!3d13.028043400000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3dec32c6c991%3A0x3b9487867ac4d6ff!2sJoy%20Pictures%20Studio%20Yeshwantpur!5e0!3m2!1sen!2sin!4v1750785304402!5m2!1sen!2sin"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Joypicturesstudio Location - Bangalore"
               data-aos="fade"
             ></iframe>
-
-            {/* Address Badge Overlay */}
             <div
               className="map-badge d-none d-md-flex flex-column gap-1 text-start"
               data-aos="fade"
             >
               <div className="fw-semibold">Joypicturesstudio</div>
               <small>
-                2<sup>nd</sup> Floor, MG Road,
-                <br />
-                Bangalore 560001
+                4/1, 4/1, Tumkur Rd, Yeshwanthpur Industrial Area, Phase 1,
+                Yeswanthpur, Bengaluru, Karnataka 560022
               </small>
               <small>
-                <i className="fas fa-phone me-1"></i> +91 98765 43210
+                <i className="fas fa-phone me-1"></i> +{phoneNumber}
               </small>
               <a
                 href="tel:+919876543210"
@@ -260,6 +294,16 @@ const Contact = () => {
             data-aos="zoom-in"
           >
             <i className="fab fa-youtube"></i>
+          </a>
+          <a
+            href={whatsappLink}
+            className="social-icon youtube"
+            title="Subscribe on YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-aos="zoom-in"
+          >
+            <i className="fa-brands fa-whatsapp"></i>
           </a>
         </div>
       </section>

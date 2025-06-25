@@ -6,16 +6,16 @@ import {
   imageData,
   testimonials,
 } from "../Data/PortfolioPageData";
+import { PortfolioSEO } from "../Data/AllPagesSEO";
+import Testimonials from "../Components/Testimonials";
+import Breadcrumbs from "../Components/Breadcrumbs";
+import Gallery from "../Components/Gallery";
 
 const Portfolio = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
 
-  const filteredImages =
-    activeCategory === "All"
-      ? imageData
-      : imageData.filter((img) => img.category === activeCategory);
   return (
     <div className="overflow-hidden">
+      {PortfolioSEO}
       <section className="portfolio-hero-section d-flex align-items-center justify-content-center text-center">
         <div className="overlay"></div>
         <div className="content text-white">
@@ -26,9 +26,12 @@ const Portfolio = () => {
             Discover our curated portfolio of wedding, event, and portrait
             photography in Bangalore.
           </p>
+          <div className="d-flex align-items-center justify-content-center">
+            <Breadcrumbs currentPage={"Portfolio"} />
+          </div>
           <Link
             to={"/portfolio/"}
-            className="btn btn-outline-light mt-4"
+            className="btn btn-light"
             data-aos="zoom-in"
           >
             View Our Work
@@ -48,41 +51,7 @@ const Portfolio = () => {
           </div>
         </div>
 
-        {/* Category Filter */}
-        <div className="container text-center py-4">
-          <div className="btn-group flex-wrap">
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                className={`btn btn-outline-dark m-1 ${
-                  activeCategory === cat ? "active" : ""
-                }`}
-                onClick={() => setActiveCategory(cat)}
-                title={`View ${cat} Portfolio`}
-                data-aos="zoom-in"
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Gallery Grid */}
-        <div className="container pb-5">
-          <div className="row g-4">
-            {filteredImages.map((img, index) => (
-              <div className="col-sm-6 col-md-4" key={index} data-aos="fade">
-                <div className="gallery-item shadow-sm rounded overflow-hidden">
-                  <img
-                    src={img.src}
-                    alt={`${img.category} Photography in Bangalore`}
-                    className="img-fluid"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Gallery />
       </section>
       <section className="project-highlights-section py-5 bg-light">
         <div className="container">
@@ -118,44 +87,7 @@ const Portfolio = () => {
           ))}
         </div>
       </section>
-
-      <section className="portfolio-testimonial-section bg-light py-5">
-        <div className="container">
-          <h3 className="section-heading text-center fw-bold mb-4">
-            What Our Clients Say
-          </h3>
-          <div className="row g-4">
-            {testimonials.map((item, idx) => (
-              <div className="col-md-4" key={idx}>
-                <div className="card portfolio-testimonial-card h-100 shadow-sm border-0">
-                  <div className="card-body">
-                    <div className="d-flex align-items-center mb-3">
-                      <i className="fa-regular fa-circle-user portfolio-testimonial-img rounded-circle"></i>
-                      <div>
-                        <h6 className="mb-0 fw-semibold">{item.name}</h6>
-                        <small className="text-muted">{item.location}</small>
-                      </div>
-                    </div>
-                    <p className="portfolio-testimonial-text">
-                      “{item.feedback}”
-                    </p>
-                    <div className="portfolio-rating">
-                      {Array(item.rating)
-                        .fill()
-                        .map((_, i) => (
-                          <i
-                            key={i}
-                            className="fas fa-star text-warning me-1"
-                          ></i>
-                        ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Testimonials />
       <section className="cta-section text-white d-flex align-items-center">
         <div className="container text-center">
           <h3 className="cta-heading" data-aos="fade-right">

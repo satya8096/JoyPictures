@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import { faqData, services } from "../Data/ServicesPageData";
 import PricingPackage from "../Components/PricingPackage";
 import WhyChooseUs from "../Components/WhyChooseUs";
+import { ServiceSEO } from "../Data/AllPagesSEO";
+import Breadcrumbs from "./../Components/Breadcrumbs";
 
 const Services = () => {
   return (
     <div className="overflow-hidden">
+      {ServiceSEO}
+
       <section
         className="services-hero d-flex align-items-center"
         id="services-hero"
@@ -24,6 +28,9 @@ const Services = () => {
             From weddings to corporate shoots, we bring your story to life
             through the lens.
           </p>
+          <div className="d-flex align-items-center justify-content-center">
+            <Breadcrumbs currentPage={"Services & Pricing"} />
+          </div>
           <div>
             <Link
               to="/services/"
@@ -42,10 +49,7 @@ const Services = () => {
           </div>
         </div>
       </section>
-      <section
-        id="core-services"
-        className="core-services-section py-5 bg-light"
-      >
+      <section id="core-services" className="core-services-section py-5">
         <div className="container">
           <div className="text-center mb-5">
             <h3 className="section-heading" data-aos="fade">
@@ -66,14 +70,13 @@ const Services = () => {
               >
                 <div className="card service-card h-100 shadow-sm border-0">
                   <img
-                    // src={service.image}
-                    src="https://img.freepik.com/free-photo/groom-gently-embracing-his-bride-forest_1153-5979.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740"
+                    src={service.image}
                     alt={service.title + " in Bangalore"}
                     className="card-img-top service-img"
                   />
                   <div className="card-body text-center">
                     <h5 className="card-title">{service.title}</h5>
-                    <p className="card-text">{service.desc}</p>
+                    <p className="card-text">{service.description}</p>
                   </div>
                 </div>
               </div>

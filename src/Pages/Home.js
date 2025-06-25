@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { services, testimonialsData } from "../Data/HomePageData";
+import { testimonialsData } from "../Data/HomePageData";
 import PricingPackage from "../Components/PricingPackage";
 import WhyChooseUs from "../Components/WhyChooseUs";
+import { HomeSEO } from "../Data/AllPagesSEO";
+import { services } from "../Data/ServicesPageData";
+import Testimonials from "../Components/Testimonials";
+import { whatsappLink } from "../Data/BrandData";
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -14,8 +18,10 @@ const Home = () => {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
   return (
     <div className="overflow-hidden">
+      {HomeSEO}
       <section className="hero-section d-flex align-items-center" id="home">
         <div className="container">
           <div className="row align-items-center">
@@ -53,9 +59,7 @@ const Home = () => {
               data-aos="fade-left"
             >
               <img
-                src={
-                  "https://img.freepik.com/premium-photo/indian-couple-traditional-modern-styles-cultural-romantic-photography_788415-7240.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740"
-                }
+                src={require("./../Assets/home_page_img1.jpg")}
                 alt="Photographer capturing wedding in Bangalore"
                 className="img-fluid hero-img"
               />
@@ -85,11 +89,13 @@ const Home = () => {
                   title={service.seoTitle}
                 >
                   <div>
-                    <img src={service.image} alt="Service" width={"100%"} />
+                    <img
+                      src={service.image}
+                      alt="Service"
+                      width={"100%"}
+                      style={{ height: "15rem" }}
+                    />
                   </div>
-                  {/* <div className="icon-wrapper mb-3">
-                    <i className={`fas ${service.icon} service-icon`}></i>
-                  </div> */}
                   <h5 className="service-title">{service.title}</h5>
                   <p className="service-description">{service.description}</p>
                 </div>
@@ -98,7 +104,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section id="portfolio" className="portfolio-section py-5 bg-light">
+      <section id="portfolio" className="portfolio-section py-5">
         <div className="container">
           {/* Section Heading */}
           <div className="section-header text-center mb-5">
@@ -206,13 +212,13 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="row align-items-center">
+          <div className="row">
             {/* Image Block */}
             <div className="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
               <div className="about-section__image-container">
                 <img
-                  src="https://img.freepik.com/premium-photo/young-couple-kissing-outdoors_1048944-10928325.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740"
-                  alt="Joypicturesstudio Bangalore photography team"
+                  src={require("./../Assets/home_page_img2.jpg")}
+                  alt="about"
                   className="img-fluid about-section__image"
                 />
                 <div className="about-section__image-overlay">
@@ -248,70 +254,20 @@ const Home = () => {
                     Award-Winning Creators
                   </li>
                 </ul>
-                <a
-                  href="#contact"
+                <Link
+                  to={whatsappLink}
                   className="btn btn-primary mt-3"
                   title="Book Your Photographer in Bangalore"
                 >
                   <i className="fas fa-calendar-check me-2"></i> Book a Session
-                </a>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
       <PricingPackage />
-      <section className="testimonials-section py-5 bg-light" id="testimonials">
-        <div className="container">
-          <div className="section-header text-center mb-5">
-            <h3 className="section-heading" data-aos="fade">
-              What Our Clients Say
-            </h3>
-            <p className="section-subtitle" data-aos="fade">
-              Trusted by hundreds across Bangalore, we turn your moments into
-              memories.
-            </p>
-          </div>
-
-          <div className="carousel-wrapper position-relative">
-            <div
-              className="testimonial-carousel d-flex justify-content-center"
-              data-aos="zoom-out"
-            >
-              {testimonialsData.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className={`testimonial-card shadow-sm p-4 rounded-4 bg-white ${
-                    index === activeIndex ? "active" : "inactive"
-                  }`}
-                >
-                  <div className="client-icon mb-3 text-center">
-                    <i className="fas fa-quote-left fa-2x text-danger"></i>
-                  </div>
-                  <p className="testimonial-text">{testimonial.text}</p>
-                  <div className="client-info mt-4 text-center">
-                    <h6 className="client-name mb-0">{testimonial.name}</h6>
-                    <p className="client-location small text-muted">
-                      {testimonial.location}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Dots Navigation */}
-            <div className="carousel-dots text-center mt-4">
-              {testimonialsData.map((_, index) => (
-                <span
-                  key={index}
-                  className={`dot ${index === activeIndex ? "active-dot" : ""}`}
-                  onClick={() => setActiveIndex(index)}
-                ></span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <Testimonials />
       <section className="cta-section d-flex align-items-center text-white">
         <div className="overlay"></div>
         <div className="container text-center cta-content">

@@ -1,43 +1,35 @@
 export const services = [
   {
-    title: "Wedding Photography",
-    desc: "Elegant and timeless wedding moments captured with artistry.",
-    image: "/images/services/wedding.jpg",
+    icon: "fa-baby",
+    title: "Newborn Photography",
+    image: require("./../Assets/service1.jpg"),
+    description:
+      "Preserve the first precious days of your baby with soft, artistic, and heartfelt newborn portraits.",
+    seoTitle: "Newborn Photography Services in Bangalore",
   },
   {
-    title: "Event Videography",
-    desc: "Cinematic storytelling for your special events and celebrations.",
-    image: "/images/services/event.jpg",
+    icon: "fa-female",
+    title: "Maternity Photography",
+    image: require("./../Assets/service2.jpg"),
+    description:
+      "Celebrate the beauty of motherhood with elegant and memorable maternity photoshoots tailored to your journey.",
+    seoTitle: "Maternity Photography Services in Bangalore",
   },
   {
-    title: "Maternity & Baby Shoots",
-    desc: "Capturing the joy of motherhood and early childhood.",
-    image: "/images/services/maternity.jpg",
+    icon: "fa-child",
+    title: "Kids Portraits",
+    image: require("./../Assets/service3.jpg"),
+    description:
+      "Let your child's personality shine with vibrant and playful portrait sessions in our creative studio environment.",
+    seoTitle: "Kids Portrait Photography in Bangalore",
   },
   {
-    title: "Couple / Pre-Wedding",
-    desc: "Creative love stories in natural and urban backdrops.",
-    image: "/images/services/couple.jpg",
-  },
-  {
-    title: "Corporate Headshots",
-    desc: "Professional portraits and team profiles with impact.",
-    image: "/images/services/corporate.jpg",
-  },
-  {
-    title: "Product & Brand Photography",
-    desc: "Visuals that build identity and drive sales for brands.",
-    image: "/images/services/product.jpg",
-  },
-  {
-    title: "Promotional Reels",
-    desc: "Engaging short-form video content for modern audiences.",
-    image: "/images/services/reels.jpg",
-  },
-  {
-    title: "Traditional & Candid Shoots",
-    desc: "A mix of posed elegance and real candid expressions.",
-    image: "/images/services/traditional.jpg",
+    icon: "fa-users",
+    title: "Family Portraits",
+    image: require("./../Assets/service4.jpg"),
+    description:
+      "Capture togetherness with timeless family portraits that reflect your bond, love, and legacy in every frame.",
+    seoTitle: "Family Portrait Photography Services in Bangalore",
   },
 ];
 export const features = [

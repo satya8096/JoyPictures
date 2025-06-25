@@ -1,5 +1,7 @@
 import React from "react";
 import WhyChooseUs from "../Components/WhyChooseUs";
+import { AboutSEO } from "../Data/AllPagesSEO";
+import Breadcrumbs from "../Components/Breadcrumbs";
 
 const TeamCard = ({ name, role, bio, img }) => {
   return (
@@ -29,6 +31,7 @@ const TeamCard = ({ name, role, bio, img }) => {
 const About = () => {
   return (
     <div className="overflow-hidden">
+      {AboutSEO}
       <section
         className="about-hero-section d-flex align-items-center text-white"
         id="about-hero"
@@ -48,6 +51,9 @@ const About = () => {
           >
             Crafting timeless memories through the lens in Bangalore
           </p>
+          <div className="d-flex align-items-center justify-content-center">
+            <Breadcrumbs currentPage={"About"} />
+          </div>
         </div>
       </section>
       <section id="our-story" className="our-story-section py-5 bg-light">
@@ -55,8 +61,7 @@ const About = () => {
           <div className="row align-items-center">
             <div className="col-lg-6 mb-4" data-aos="fade-right">
               <img
-                src="https://img.freepik.com/premium-photo/wedding-rings-background-engagement-marriage-template_568886-5602.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740"
-                alt="Joypicturesstudio team working in Bangalore"
+                src={require("./../Gallery Images/img3.jpg")}
                 className="img-fluid rounded shadow story-img"
               />
             </div>
@@ -84,9 +89,9 @@ const About = () => {
           <div className="row align-items-center">
             <div className="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
               <img
-                src="https://img.freepik.com/premium-photo/awesome-beautiful-tall-beard-man-photographer-glasses-black-t-shirt-with-professional-camera-hands_151355-5212.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740"
+                src={require("./../Gallery Images/img5.jpg")}
                 alt="Our Mission - Joypicturesstudio Bangalore"
-                className="img-fluid rounded shadow"
+                className="img-fluid rounded"
               />
             </div>
             <div className="col-md-6 text-content" data-aos="fade-left">
@@ -114,7 +119,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section id="team" className="team-section py-5 bg-light">
+      <section id="team" className="team-section py-5">
         <div className="container">
           <div className="text-center mb-5">
             <h3 className="section-heading" data-aos="fade">

@@ -4,7 +4,7 @@ import { features } from '../Data/ServicesPageData'
 const WhyChooseUs = () => {
   return (
     <div>
-            <section id="why-choose" className="why-choose-section py-5 bg-light">
+            <section id="why-choose" className="why-choose-section py-5">
               <div className="container text-center">
                 <h3 className="section-heading mb-4" data-aos="fade">
                   Why Choose Joypicturesstudio ?

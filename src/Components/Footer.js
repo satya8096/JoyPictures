@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { phoneNumber, whatsappLink } from "../Data/BrandData";
 
 const Footer = () => {
   return (
@@ -91,7 +92,12 @@ const Footer = () => {
               info@joypicturesstudio.com
             </p>
             <p>
-              <i className="fas fa-phone me-2"></i> +91 98765 43210
+              <i className="fas fa-phone me-2"></i> +{phoneNumber}
+            </p>
+            <p>
+              <Link to={whatsappLink}>
+                <i className="fa-brands fa-whatsapp me-2"></i> +{phoneNumber}
+              </Link>
             </p>
             <p>
               <i className="fab fa-instagram me-2"></i> @joypicturesstudio

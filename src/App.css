@@ -44,6 +44,9 @@ h6 {
   font-family: "Ancizar Sans", sans-serif;
   font-family: "Outfit", sans-serif;
 }
+.breadcrumb-item + .breadcrumb-item::before {
+  color: white;
+}
 .section-heading {
   color: #2b6777;
   text-align: center;
@@ -232,9 +235,9 @@ h6 {
 }
 
 /* Home Services */
-.services-section {
+/* .services-section {
   background: #f9f9f9;
-}
+} */
 
 /* .section-title {
   font-size: 2.5rem;
@@ -293,9 +296,9 @@ h6 {
 }
 
 /* Home Portfolio */
-.portfolio-section {
+/* .portfolio-section {
   background-color: #fdfdfd;
-}
+} */
 
 .section-header {
   max-width: 700px;
@@ -390,32 +393,6 @@ h6 {
   font-size: 0.95rem;
   color: #666;
 }
-
-.why-choose-us__testimonials {
-  margin-top: 60px;
-}
-
-.testimonial-box {
-  background: #fff;
-  border-left: 4px solid #ff5c5c;
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.testimonial-text {
-  font-style: italic;
-  color: #444;
-}
-
-.testimonial-author {
-  display: block;
-  margin-top: 10px;
-  font-weight: 500;
-  color: #888;
-}
-
 /* Home About Styles */
 .about-section {
   /* background: #f8f9fa; */
@@ -482,37 +459,10 @@ h6 {
   color: #444;
 }
 
-/* .btn-primary {
-  background-color: #ff5c5c;
-  border-color: #ff5c5c;
-  font-weight: 500;
-  padding: 10px 22px;
-  border-radius: 25px;
-  transition: background-color 0.3s ease;
-} */
-
-/* .btn-primary:hover {
-  background-color: #e04c4c;
-  border-color: #e04c4c;
-} */
-
 /* Home Pricing Cards */
 
 .pricing-section {
   background: linear-gradient(180deg, #ffffff, #f8f9fa);
-}
-
-/* .section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #333;
-} */
-
-.section-subtitle {
-  font-size: 1rem;
-  color: #666;
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 .pricing-card {
@@ -521,10 +471,10 @@ h6 {
   padding: 2rem 1.5rem;
   transition: all 0.3s ease;
   position: relative;
-  margin-bottom: 2rem;
   border: 1px solid #eee;
-  height: 23rem;
+  height: 17rem;
   width: 18rem;
+  margin: 1.5rem;
 }
 
 .pricing-card:hover {
@@ -544,7 +494,12 @@ h6 {
   font-weight: 700;
   color: #ff5c5c;
 }
-
+.pricing-card-btn {
+  position: absolute;
+  bottom: -1.3em;
+  left: 4rem;
+  right: 4rem;
+}
 .plan-features li {
   font-size: 0.95rem;
   margin: 0.5rem 0;
@@ -573,18 +528,6 @@ h6 {
   font-weight: bold;
   border-radius: 5px;
 }
-
-/* Home Testimonials */
-.testimonials-section {
-  background-color: #f8f9fa;
-}
-/*
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #333;
-} */
-
 .section-subtitle {
   font-size: 1rem;
   color: #666;
@@ -596,67 +539,6 @@ h6 {
   position: relative;
   overflow: hidden;
 }
-
-.testimonial-carousel {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.testimonial-card {
-  width: 100%;
-  max-width: 600px;
-  opacity: 0;
-  transform: scale(0.95);
-  transition: all 0.4s ease;
-  display: none;
-}
-
-.testimonial-card.active {
-  display: block;
-  opacity: 1;
-  transform: scale(1);
-}
-
-.testimonial-card.inactive {
-  display: none;
-}
-
-.testimonial-text {
-  font-style: italic;
-  color: #444;
-  line-height: 1.6;
-}
-
-.client-icon i {
-  color: #ff5c5c;
-}
-
-.client-name {
-  font-weight: 600;
-  color: #222;
-}
-
-.client-location {
-  font-size: 0.85rem;
-  color: #888;
-}
-
-/* Dots */
-.carousel-dots .dot {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.carousel-dots .active-dot {
-  background-color: #ff5c5c;
-}
-
 /* Home Cta styles */
 .cta-section {
   position: relative;
@@ -704,16 +586,33 @@ h6 {
   text-decoration: none;
 }
 
-/* Home Blogs Styles*/
-.blog-section {
-  background-color: #f8f9fa;
+.testimonial-card {
+  max-width: 600px;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-/* .section-title {
-  font-size: 2rem;
-  font-weight: 700;
+.testimonial-img{
+  font-size: 4rem;
+}
+.testimonial-name {
+  font-weight: 600;
   color: #333;
-} */
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 1rem;
+  color: #555;
+  margin: 1rem 0;
+}
+
+.testimonial-stars i {
+  font-size: 1.2rem;
+  margin: 0 2px;
+}
 
 .section-subtitle {
   font-size: 1rem;
@@ -801,16 +700,6 @@ h6 {
 }
 
 /* Services Cards Styles */
-.core-services-section {
-  background-color: #f8f9fa;
-}
-
-/* .section-title {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #222;
-} */
-
 .section-subtitle {
   max-width: 700px;
   margin: 0 auto;
@@ -830,7 +719,7 @@ h6 {
 }
 
 .service-img {
-  height: 200px;
+  height: 17rem;
   object-fit: cover;
   border-bottom: 4px solid #ff5c5c;
 }
@@ -847,9 +736,9 @@ h6 {
 }
 
 /* Services Why Choose Us Styles */
-.why-choose-section {
+/* .why-choose-section {
   background-color: #f8f9fa;
-}
+} */
 
 /* .section-title {
   font-size: 2rem;
@@ -880,9 +769,9 @@ h6 {
 }
 
 /* Services Portfolio */
-.portfolio-preview-section {
+/* .portfolio-preview-section {
   background-color: #f9f9f9;
-}
+} */
 
 /* .section-title {
   font-size: 2rem;
@@ -1081,73 +970,12 @@ h6 {
   background-color: #e04e4e;
 }
 
-.testimonials-section {
-  background-color: #f8f9fa;
-}
-
-.portfolio-testimonial-card {
-  transition: transform 0.3s ease;
-}
-
-.portfolio-testimonial-card:hover {
-  transform: translateY(-5px);
-}
-
-.portfolio-testimonial-text {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-.cta-section {
-  background: linear-gradient(120deg, #ff5c5c, #d63447);
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.cta-section h2 {
-  font-weight: 600;
-}
-
-.cta-section p {
-  font-size: 1.1rem;
-}
-
-.portfolio-testimonial-section {
-  background: #f8f9fa;
-}
-
-.portfolio-testimonial-card {
-  border-radius: 1rem;
-  background-color: #fff;
-  transition: transform 0.3s ease;
-}
-
-.portfolio-testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-}
-
-.portfolio-testimonial-img {
-  font-size: 2.4rem;
-  margin: 1rem;
-}
-
-.portfolio-testimonial-text {
-  font-size: 0.95rem;
-  color: #555;
-  font-style: italic;
-  margin-top: 0.75rem;
-}
-
-.portfolio-rating i {
-  font-size: 0.9rem;
-}
-
 .cta-section {
   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
     url("https://img.freepik.com/premium-photo/couple-sunset-photo-with-sun-shining-through-windows_1312957-2559.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740")
       center/cover no-repeat;
   padding: 80px 0;
+  background-attachment: fixed;
   transition: background 0.3s ease-in-out;
 }
 
@@ -1353,7 +1181,7 @@ h6 {
 .map-badge {
   position: absolute;
   top: 24px;
-  left: 24px;
+  right: 24px;
   background: rgba(18, 18, 18, 0.87);
   color: #fff;
   padding: 12px 16px;
