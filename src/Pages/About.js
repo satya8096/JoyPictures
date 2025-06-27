@@ -93,16 +93,45 @@ const About = () => {
           </div>
         </div>
       </section>
+      <section className="founder-section py-5">
+        <div className="container">
+          <div className="row align-items-center g-5">
+            {/* Founder Image */}
+            <div className="col-md-5 text-center">
+              <div className="founder-img-wrapper">
+                <img
+                  src={require("./../Assets/founder_image.jpg")}
+                  alt="Founder of Joypicturestudio"
+                  className="img-fluid rounded-circle shadow founder-image"
+                />
+              </div>
+            </div>
+
+            {/* Founder Details */}
+            <div className="col-md-7">
+              <h3 className="fw-bold mb-2">Meet Our Founder</h3>
+              <h5 className="text-muted mb-3 fw-bold">
+                Emanuel Paul – Newborn and Maternity Photographer
+              </h5>
+              <p className="text-secondary mb-4">
+                With over 10 years of hands-on experience in Newborn and
+                Maternity, capturing life’s most precious moments, Emanuel Paul
+                founded Joypicturesstudio with a simple belief — every story
+                deserves to be remembered in its truest light. His creative
+                vision blends traditional beauty with cinematic flair, ensuring
+                every shoot is authentic, emotional, and timeless.
+              </p>
+              <blockquote className="blockquote fst-italic text-dark">
+                “Photography is not just about clicking a shutter — it’s about
+                connecting with people, moments, and memories.”
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="our-story" className="our-story-section py-5">
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6 mb-4" data-aos="fade-right">
-              <img
-                src={require("./../Gallery Images/img3.jpg")}
-                alt="about-image"
-                className="img-fluid rounded shadow story-img"
-              />
-            </div>
+          <div className="row">
             <div className="col-lg-6" data-aos="fade-left">
               <h3 className="fw-bold">Our Story</h3>
               <p className="story-text">
@@ -122,12 +151,26 @@ const About = () => {
                 captured with passion, creativity, and precision.
               </p>
             </div>
+            <div className="col-lg-6 mb-4" data-aos="fade-right">
+              <img
+                src={require("./../Gallery Images/img3.jpg")}
+                alt="about-image"
+                className="img-fluid rounded shadow story-img"
+              />
+            </div>
           </div>
         </div>
       </section>
       <section className="mission-values-section py-5" id="mission-values">
         <div className="container">
           <div className="row align-items-center">
+            <div className="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+              <img
+                src={require("./../Gallery Images/img5.jpg")}
+                alt="Our Mission - Joypicturestudio Bangalore"
+                className="img-fluid rounded"
+              />
+            </div>
             <div className="col-md-6 text-content" data-aos="fade-left">
               <h3 className="mb-3">Our Mission</h3>
               <p className="mb-4">
@@ -150,13 +193,6 @@ const About = () => {
                 </li>
               </ul>
             </div>
-            <div className="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
-              <img
-                src={require("./../Gallery Images/img5.jpg")}
-                alt="Our Mission - Joypicturestudio Bangalore"
-                className="img-fluid rounded"
-              />
-            </div>
           </div>
         </div>
       </section>
@@ -171,7 +207,7 @@ const About = () => {
               <div className="col-md-4 col-sm-6 col-10 team-card" key={index}>
                 <div className="team-avatar">
                   <div className="avatar-circle">
-                    <i class="fa-solid fa-user-tie fa-3x mb-2"></i>
+                    <i className="fa-solid fa-user-tie fa-3x mb-2"></i>
                   </div>
                   <div className="team-details">
                     <h4>{member.name}</h4>

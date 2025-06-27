@@ -1125,7 +1125,7 @@ h6 {
     url("https://img.freepik.com/free-vector/silhouette-loving-couple-bokeh-lights-background_1048-8734.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740")
       center/cover no-repeat;
   background-attachment: fixed;
-  padding: 17rem 0.3rem;
+  padding: 19rem 0.3rem;
   position: relative;
 }
 
@@ -1496,4 +1496,10 @@ h6 {
   .pricingTable {
     margin: 0 0 40px;
   }
+}
+
+.founder-image {
+  width: 15rem;
+  border: 2px solid black;
+  box-shadow: 0px 0px 10px 15px black;
 }
