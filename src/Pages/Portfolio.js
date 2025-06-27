@@ -18,7 +18,8 @@ const Portfolio = () => {
             Capturing Timeless Moments
           </h2>
           <p className="mt-3" data-aos="fade-left">
-            Discover our curated portfolio of wedding, event, and portrait
+            Discover our curated portfolio of Photography, Maternity
+            Photography, Kids Portraits, Family Portraits and portrait
             photography in Bangalore.
           </p>
           <div

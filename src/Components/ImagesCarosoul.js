@@ -13,7 +13,8 @@ const ImagesCarosoul = () => {
             </h3>
             <p className="section-subtitle" data-aos="fade">
               A glimpse into the moments we’ve captured across Bangalore —
-              weddings, maternity shoots, events & more.
+              Newborn Photography, Maternity Photography, Kids Portraits, Family
+              Portraits.
             </p>
           </div>
 
@@ -99,7 +100,7 @@ const ImagesCarosoul = () => {
               title="See Full Wedding Photography Album"
               data-aos="zoom-in"
             >
-              View Wedding Album
+              View Kids Portraits Album
             </a>
             <a
               href="/portfolio/"

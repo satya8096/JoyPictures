@@ -27,8 +27,8 @@ const Services = () => {
           </h2>
           <p className="lead mt-3 mb-4" data-aos="fade-left">
             Capture your life's most cherished moments with {brandName} – From
-            weddings to corporate shoots, we bring your story to life through
-            the lens.
+            tiny toes to family bonds shoots, we bring your story to life
+            through the lens.
           </p>
           <div
             className="d-flex align-items-center justify-content-center"

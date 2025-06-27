@@ -39,9 +39,9 @@ export const features = [
     desc: "We’ve mastered the art of capturing timeless moments with unmatched professionalism.",
   },
   {
-    icon: "fas fa-smile-beam text-success",
-    title: "1000+ Happy Clients",
-    desc: "From weddings to corporate events, our work speaks through delighted smiles.",
+    icon: "fas fa-baby text-primary",
+    title: "Cherished Family Memories",
+    desc: "We’ve captured over 1000+ heartfelt moments — from tiny toes to family bonds — with creativity and care.",
   },
   {
     icon: "fas fa-video text-danger",
@@ -60,7 +60,7 @@ export const faqData = [
     id: 1,
     question: "Do you travel for shoots outside Bangalore?",
     answer:
-      "Yes! While we're based in Bangalore, we frequently travel for destination weddings, events, and shoots across India. Travel costs will be discussed in the package.",
+      "Yes! While we're based in Bangalore, we frequently travel for destination Newborn Photography, Maternity Photography, Kids Portraits, Family Portraits., and shoots across India. Travel costs will be discussed in the package.",
   },
   {
     id: 2,
@@ -75,5 +75,3 @@ export const faqData = [
       "Delivery time depends on the package and shoot type, but typically you’ll receive your fully edited photos within 10–15 working days and videos within 15–25 working days.",
   },
 ];
-
-

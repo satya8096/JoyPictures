@@ -110,9 +110,12 @@ const About = () => {
                 <strong>{brandName}</strong> was born out of a deep love for{" "}
                 <em>visual storytelling</em>. With over{" "}
                 <strong>10 years</strong> of experience in{" "}
-                <strong>wedding</strong>, <strong>event</strong>, and{" "}
-                <strong>commercial photography</strong>, our mission is to turn
-                every moment into a beautiful memory that lasts forever.
+                <strong>
+                  Newborn Photography, Maternity Photography, Kids Portraits,
+                  Family Portraits.
+                </strong>
+                , <strong>event</strong>, our mission is to turn every moment
+                into a beautiful memory that lasts forever.
               </p>
               <p className="story-text">
                 We believe that every story is unique and deserves to be

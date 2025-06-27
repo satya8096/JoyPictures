@@ -135,14 +135,13 @@ const Home = () => {
                 <p className="about-section__text">
                   At {brandName}, we go beyond just clicking pictures — we craft
                   timeless visual stories. Based in Bangalore, our creative team
-                  specializes in cinematic wedding shoots, candid portraits,
-                  high-end event coverage, and modern branding visuals for
-                  individuals and businesses alike.
+                  specializes in Newborn Photography, Maternity Photography,
+                  Kids Portraits, Family Portraits.
                 </p>
                 <ul className="about-section__features list-unstyled">
                   <li>
                     <i className="fas fa-check-circle me-2 text-success"></i>{" "}
-                    500+ Events Captured
+                    500+ Photos Captured
                   </li>
                   <li>
                     <i className="fas fa-check-circle me-2 text-success"></i>{" "}

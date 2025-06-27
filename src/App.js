@@ -22,7 +22,7 @@ function App() {
     <Suspense
       fallback={
         <div className="loader-bg bg-dark">
-          <span class="loader"></span>
+          <span className="loader"></span>
         </div>
       }
     >

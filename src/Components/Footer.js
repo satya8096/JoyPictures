@@ -14,7 +14,7 @@ const Footer = () => {
             <p>
               Premier photography & videography studio in Bangalore. We
               specialize in Newborn Photography, Maternity Photography, Kids
-              Portraits, Family Portraits..
+              Portraits, Family Portraits.
             </p>
           </div>
 
@@ -25,16 +25,6 @@ const Footer = () => {
             </h6>
             <hr className="mb-2 mt-0 d-inline-block mx-auto hr-custom" />
             <ul className="list-unstyled">
-              <li>
-                <Link to="/services/" title="Wedding Photography Bangalore">
-                  Wedding
-                </Link>
-              </li>
-              <li>
-                <Link to="/services/" title="Event Coverage in Bangalore">
-                  Event Videography
-                </Link>
-              </li>
               <li>
                 <Link to="/services/" title="Portrait Sessions in Bangalore">
                   Portrait Sessions

@@ -53,9 +53,9 @@ const PricingPlans = () => {
         </p>
       </div>
       <div className="row d-flex justify-content-around">
-        {pricingData.map((priceDetail) => {
+        {pricingData.map((priceDetail, index) => {
           return (
-            <div className={`pricingTable ${priceDetail.color}`}>
+            <div className={`pricingTable ${priceDetail.color}`} key={index}>
               <div className="pricingTable-header">
                 <h4 className="fw-bold">{priceDetail.title}</h4>
               </div>
