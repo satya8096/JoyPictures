@@ -121,7 +121,12 @@ const Home = () => {
                   className="img-fluid about-section__image"
                 />
                 <div className="about-section__image-overlay">
-                  <i className="fas fa-camera-retro"></i>
+                  <img
+                    src={require("./../Assets/IMG_0730.png")}
+                    alt="joypictures_logo"
+                    style={{ width: "7rem", borderRadius: "0.6rem" }}
+                    className="me-3"
+                  />
                 </div>
               </div>
             </div>

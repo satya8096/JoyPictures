@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { brandName } from "../Data/BrandData";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -25,7 +24,7 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   return (
     <nav
       className={`navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top ${
@@ -39,8 +38,12 @@ const Navbar = () => {
           className="navbar-brand d-flex align-items-center"
           title="Joypicturestudio - Photography and Videography in Bangalore"
         >
-          <i className="fas fa-camera-retro me-2 logo-icon"></i>
-          <span className="brand-text">{brandName}</span>
+          <img
+            src={require("./../Assets/IMG_0730.png")}
+            alt="joypictures_logo"
+            style={{ width: "7rem", borderRadius: "0.6rem" }}
+            className="me-3"
+          />
         </NavLink>
 
         {/* Toggle button */}
@@ -71,7 +74,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/services"
+                to="/services/"
                 className="nav-link"
                 title="Photography & Videography Services"
                 onClick={handleNavCollapse}
@@ -81,7 +84,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/portfolio"
+                to="/portfolio/"
                 className="nav-link"
                 title="View Portfolio - Joypicturestudio"
                 onClick={handleNavCollapse}
@@ -91,7 +94,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/about"
+                to="/about/"
                 className="nav-link"
                 title="About Joypicturestudio in Bangalore"
                 onClick={handleNavCollapse}
@@ -101,7 +104,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/contact"
+                to="/contact/"
                 className="nav-link"
                 title="Contact Joypicturestudio - Book Now"
                 onClick={handleNavCollapse}

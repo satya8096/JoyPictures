@@ -10,7 +10,13 @@ const Footer = () => {
           {/* Branding & Intro */}
           <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
             <h6 className="footer-title text-uppercase fw-bold">{brandName}</h6>
-            <hr className="mb-2 mt-0 d-inline-block mx-auto hr-custom" />
+            {/* <hr className="mb-2 mt-0 d-inline-block mx-auto hr-custom" /> */}
+            <img
+              src={require("./../Assets/IMG_0730.png")}
+              alt="joypictures_logo"
+              style={{ width: "7rem", borderRadius: "0.6rem" }}
+              className="me-3"
+            />
             <p>
               Premier photography & videography studio in Bangalore. We
               specialize in Newborn Photography, Maternity Photography, Kids
@@ -81,10 +87,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/services/"
-                  title="Frequently Asked Questions"
-                >
+                <Link to="/services/" title="Frequently Asked Questions">
                   FAQs
                 </Link>
               </li>
@@ -123,7 +126,7 @@ const Footer = () => {
         <div className="text-center mt-4">
           <p className="small mb-0">
             &copy; {new Date().getFullYear()}{" "}
-            <strong>{brandName}. All rights Reserved. </strong> | Created with
+            <strong>{brandName}. All rights Reserved </strong> | Created with
             ❤️ by <a href="https://nexgenwebdesigns.com">NexGen Web Designs</a>
           </p>
         </div>
