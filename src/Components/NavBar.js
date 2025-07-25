@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { phoneNumber } from "../Data/BrandData";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -113,6 +114,11 @@ const Navbar = () => {
               </NavLink>
             </li>
           </ul>
+          <div className="text-center ms-3">
+            <Link className="btn btn-primary" to={`tel:${phoneNumber}`}>
+              <i className="fa-solid fa-phone"></i> Contact Us
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

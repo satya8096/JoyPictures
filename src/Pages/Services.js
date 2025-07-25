@@ -73,7 +73,7 @@ const Services = () => {
                 key={index}
                 data-aos="zoom-in"
               >
-                <div className="card service-card h-100 shadow-sm border-0">
+                <div className="car h-100 shadow-sm border-0">
                   <img
                     src={service.image}
                     alt={service.title + " in Bangalore"}

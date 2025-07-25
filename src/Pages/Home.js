@@ -41,11 +41,50 @@ const Home = () => {
                   <i className="fas fa-calendar-check me-2"></i> Book Now
                 </Link>
               </div>
+              <div className="mt-4">
+                <div className="d-flex flex-column flex-sm-row align-items-center justify-content-start rounded-3 py-3">
+                  <div className="me-sm-4 mb-2 mb-sm-0 text-center text-sm-start">
+                    <div className="d-flex align-items-center mb-1">
+                      <i className="fa-solid fa-star text-warning me-1 fs-5"></i>
+                      <i className="fa-solid fa-star text-warning me-1 fs-5"></i>
+                      <i className="fa-solid fa-star text-warning me-1 fs-5"></i>
+                      <i className="fa-solid fa-star text-warning me-1 fs-5"></i>
+                      <i className="fa-solid fa-star text-warning me-1 fs-5"></i>
+                      <span
+                        className="fw-bold mt-2 ms-2"
+                        style={{ fontSize: "1.2rem" }}
+                      >
+                        4.9
+                      </span>
+                    </div>
+                    <div className="text-muted small">
+                      Based on 15+ Google Reviews
+                    </div>
+                  </div>
+
+                  <div className="text-center text-sm-start border-start ps-sm-4">
+                    <div className="d-flex align-items-center justify-content-center">
+                      <img
+                        src={require("./../Assets/google_logo.png")}
+                        alt="logo"
+                        className="me-2"
+                        style={{ width: "2rem" }}
+                      />
+                      <Link
+                        to={"https://maps.app.goo.gl/PLUYjVmzSP32VqJs8"}
+                        className="fw-semibold text-white text-decoration-none small"
+                      >
+                        Verified by Google
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Right Image or Visual */}
             <div
-              className="col-md-6 text-center mt-4 mt-md-0"
+              className="col-md-6 text-center mt-md-0"
               data-aos="fade-left"
             >
               <img
@@ -210,7 +249,7 @@ const Home = () => {
             <div className="col-md-4" data-aos="zoom-in">
               <div className="blog-card">
                 <img
-                  src="https://img.freepik.com/free-photo/groom-gently-embracing-his-bride-forest_1153-5979.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_hybrid&w=740"
+                  src={require("./../Assets/blog_img_1.avif")}
                   alt="Wedding Photography Tips Bangalore"
                   className="blog-img"
                 />
@@ -237,7 +276,7 @@ const Home = () => {
             <div className="col-md-4" data-aos="zoom-in">
               <div className="blog-card">
                 <img
-                  src="https://img.freepik.com/free-photo/bridal-couple-hugging-field_1139-342.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&w=740"
+                  src={require("./../Assets/blog_img_2.avif")}
                   alt="Candid Photography Bangalore Tips"
                   className="blog-img"
                 />
@@ -264,7 +303,7 @@ const Home = () => {
             <div className="col-md-4" data-aos="zoom-in">
               <div className="blog-card">
                 <img
-                  src="https://img.freepik.com/premium-photo/nature-outdoor-couple-with-love-wedding-bonding-with-happiness-relationship-embrace-partners-bride-groom-outdoor-park-hug-with-marriage-loving-romance-with-celebration_590464-191750.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&w=740"
+                  src={require("./../Assets/blog_img_3.avif")}
                   alt="Photography Gear Bangalore"
                   className="blog-img"
                 />

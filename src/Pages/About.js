@@ -36,31 +36,13 @@ const team = [
     experience: "Specializes in Photography",
     icon: "fa-camera",
   },
+  {
+    name: "Suresh",
+    role: "Photo Editor",
+    experience: "Specializes in Photo Editor",
+    icon: "fa-camera",
+  },
 ];
-
-//   return (
-//     <div className="team-card card shadow-sm border-0 h-100" data-aos="zoom-in">
-//       <img
-//         src={img}
-//         alt={`${name} - ${role}`}
-//         className="card-img-top team-img"
-//       />
-//       <div className="card-body text-center">
-//         <h5 className="card-title">{name}</h5>
-//         <h6 className="text-muted mb-2">{role}</h6>
-//         <p className="card-text">{bio}</p>
-//         <div className="social-icons mt-3">
-//           <a href="/" title="Instagram" className="me-3">
-//             <i className="fab fa-instagram"></i>
-//           </a>
-//           <a href="/" title="LinkedIn">
-//             <i className="fab fa-linkedin-in"></i>
-//           </a>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
 
 const About = () => {
   return (

@@ -74,9 +74,9 @@ const Portfolio = () => {
               <div className="col-md-6" data-aos="fade-left">
                 <h4 className="fw-bold mb-3 mt-3">{project.title}</h4>
                 <p>{project.description}</p>
-                <Link to={project.link} className="btn btn-danger mt-2">
+                <a href={project.link} className="btn btn-danger mt-2">
                   {project.cta}
-                </Link>
+                </a>
               </div>
             </div>
           ))}

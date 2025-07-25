@@ -29,13 +29,9 @@ const FloatingButtons = () => {
         href={`https://wa.me/${whatsappNumber}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="whatsapp-button"
-        data-aos="zoom-in"
+        className="btn btn-success shadow whatsapp-btn"
       >
-        <img
-          src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
-          alt="WhatsApp"
-        />
+        <i className="fab fa-whatsapp fa-lg"></i>
       </a>
     </div>
   );

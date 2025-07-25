@@ -81,49 +81,6 @@ const Contact = () => {
           </Link>
         </div>
       </section>
-      {/* <section className="d-none contact-info-section py-5">
-        <div className="container">
-          <div className="row text-center g-4">
-            <div className="col-md-4">
-              <div className="info-box shadow-sm p-4 h-100">
-                <div className="icon mb-3">
-                  <i className="fas fa-map-marker-alt fa-2x"></i>
-                </div>
-                <h5 className="info-title">Our Studio</h5>
-                <p className="info-text">
-                  2nd Floor, MG Road
-                  <br />
-                  Bangalore - 560001, India
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="info-box shadow-sm p-4 h-100">
-                <div className="icon mb-3">
-                  <i className="fas fa-phone fa-2x"></i>
-                </div>
-                <h5 className="info-title">Call Us</h5>
-                <p className="info-text">
-                  +91 98765 43210
-                  <br />
-                  (Mon - Sat, 10am - 7pm)
-                </p>
-              </div>
-            </div>
-
-            <div className="col-md-4">
-              <div className="info-box shadow-sm p-4 h-100">
-                <div className="icon mb-3">
-                  <i className="fas fa-envelope fa-2x"></i>
-                </div>
-                <h5 className="info-title">Email Us</h5>
-                <p className="info-text">info@joypicturesstudio.com</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
       <section className="branch-section py-5">
         <div className="container">
           <h3 className="text-center section-heading mb-4" data-aos="fade">
@@ -161,59 +118,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-      <section className="contact-form d-none container py-5" id="contact">
-        <div className="row justify-content-center">
-          <div className="col-lg-8">
-            <div className="form-wrapper shadow-lg p-5 rounded-4">
-              <h3 className="text-center mb-4 section-heading">
-                <i className="fas fa-envelope-open-text me-2 text-danger"></i>
-                Send Us a Message
-              </h3>
-              <form>
-                <div className="row mb-3">
-                  <div className="col-md-6 mb-3 mb-md-0">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Your Name *"
-                      required
-                    />
-                  </div>
-                  <div className="col-md-6">
-                    <input
-                      type="email"
-                      className="form-control"
-                      placeholder="Your Email *"
-                      required
-                    />
-                  </div>
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Subject (e.g., Wedding Shoot Booking)"
-                  />
-                </div>
-                <div className="mb-4">
-                  <textarea
-                    className="form-control"
-                    rows="5"
-                    placeholder="Your Message or Inquiry..."
-                    required
-                  ></textarea>
-                </div>
-                <div className="text-center">
-                  <button type="submit" className="btn btn-danger btn-lg w-100">
-                    <i className="fas fa-paper-plane me-2"></i>Send Message
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="location" className="map-wrapper py-5">
         <div className="container">
           <h3 className="section-heading text-center mb-4" data-aos="fade">
@@ -245,7 +149,7 @@ const Contact = () => {
                 <i className="fas fa-phone me-1"></i> +{phoneNumber}
               </small>
               <a
-                href="tel:+919876543210"
+                href={`tel:${phoneNumber}`}
                 className="btn btn-danger btn-sm mt-2"
               >
                 Call Now

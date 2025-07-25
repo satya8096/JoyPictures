@@ -12,7 +12,7 @@ const Gallery = () => {
   return (
     <section className="gallery-section">
       <div className="container text-center py-4">
-        <div className="btn-group flex-wrap">
+        <div className="btn-group flex-wrap ">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -21,14 +21,14 @@ const Gallery = () => {
               }`}
               onClick={() => setActiveCategory(cat)}
               title={`View ${cat} Portfolio`}
-              disabled="true"
+              // disabled="true"
             >
               {cat}
             </button>
           ))}
         </div>
       </div>
-      <div className="container">
+      <div className="container" id="gallery-images">
         <div className="row g-3">
           {filteredImages.map((img, index) => (
             <div
