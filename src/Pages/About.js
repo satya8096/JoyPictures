@@ -39,7 +39,7 @@ const team = [
   {
     name: "Suresh",
     role: "Photo Editor",
-    experience: "Specializes in Photo Editor",
+    experience: "Specializes in Photo Editing",
     icon: "fa-camera",
   },
 ];
